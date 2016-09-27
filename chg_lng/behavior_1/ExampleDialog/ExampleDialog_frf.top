@@ -1,0 +1,25 @@
+topic: ~ExampleDialog()
+language: frf
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u: (e:onStart) "quel est votre choix de langue ?"
+u: (anglais)
+    "en anglais"
+    $chg_lng/Lng="English"
+    $onStopped=1
+u: (français)
+    "en français"
+    $chg_lng/Lng="French"
+    $onStopped=1
+u: (chinois)
+    "en chinois"
+    $chg_lng/Lng="Chinese"
+    $onStopped=1

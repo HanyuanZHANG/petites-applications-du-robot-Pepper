@@ -1,0 +1,9 @@
+topic: ~ExampleDialog()
+language: enu
+
+u: (anglais)
+    $Lng="English"
+    $onStopped=1
+u: (français)
+    $Lng="French"
+    $onStopped=1

@@ -1,0 +1,18 @@
+topic: ~DialogMulitlingual()
+language: enu
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(e:onStart) Hello !
+
+u:(bye)
+    "good bye"
+    $onStopped=1
+    $chg_lng/restart=1
