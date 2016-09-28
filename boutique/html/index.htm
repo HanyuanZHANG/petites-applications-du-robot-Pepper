@@ -106,7 +106,7 @@ page.
 </div>
 
 <div class="page page-question ng-scope">
-	<div style="opacity: 0;" class="question-banner-top ng-isolate-scope velocity-animating" velocity-transition="{transition: 'slideDownBigIn', delay: 0}">
+	<div style="opacity: 1; display: block; transform: translateY(0px);" class="question-banner-top ng-isolate-scope" velocity-transition="{transition: 'slideDownBigIn', delay: 0}">
 		<div class="question-banner-top-inner">
 			<div class="menu-top">
 				<!-- ngIf: currentQuestionIndex > 0 -->
@@ -119,17 +119,17 @@ page.
 
 	<!-- QUESTIONS DEBUT -->
 	<div class="questions">
-		<!-- ngRepeat: answer in app.questions[currentQuestionIndex].answers --><div style="opacity: 0;" class="question question-3" ng-repeat="answer in app.questions[currentQuestionIndex].answers" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" ng-click="stats('Q'+(currentQuestionIndex+1), 'R'+($index+1)+' '+answer.label); select($index)">
+		<!-- ngRepeat: answer in app.questions[currentQuestionIndex].answers --><div style="opacity: 1; display: block; transform: translateX(0px);" class="question question-3" ng-repeat="answer in app.questions[currentQuestionIndex].answers" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" ng-click="stats('Q'+(currentQuestionIndex+1), 'R'+($index+1)+' '+answer.label); select($index)">
 			<div class="corner-left"></div>
 			<div class="corner-left-txt ng-binding">1</div>
 			<div class="question-text-container"><div class="question-text"><div class="question-text-inner align-right ng-binding">Je préfère une montre connectée à mon mobile</div></div></div>
 			<div class="question-image-container" style="background-image: url(assets/images/questions/question-4-1.jpg)"></div>
-		</div><!-- end ngRepeat: answer in app.questions[currentQuestionIndex].answers --><div style="opacity: 0;" class="question question-3 velocity-animating" ng-repeat="answer in app.questions[currentQuestionIndex].answers" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" ng-click="stats('Q'+(currentQuestionIndex+1), 'R'+($index+1)+' '+answer.label); select($index)">
+		</div><!-- end ngRepeat: answer in app.questions[currentQuestionIndex].answers --><div style="opacity: 1; display: block; transform: translateX(0px);" class="question question-3" ng-repeat="answer in app.questions[currentQuestionIndex].answers" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" ng-click="stats('Q'+(currentQuestionIndex+1), 'R'+($index+1)+' '+answer.label); select($index)">
 			<div class="corner-left"></div>
 			<div class="corner-left-txt ng-binding">2</div>
 			<div class="question-text-container"><div class="question-text"><div class="question-text-inner align-right ng-binding">Je préfère un bracelet qui m’aide à suivre mon activité physique</div></div></div>
 			<div class="question-image-container" style="background-image: url(assets/images/questions/smartwatch_fitwatch.jpg)"></div>
-		</div><!-- end ngRepeat: answer in app.questions[currentQuestionIndex].answers --><div style="opacity: 0;" class="question question-3 velocity-animating" ng-repeat="answer in app.questions[currentQuestionIndex].answers" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" ng-click="stats('Q'+(currentQuestionIndex+1), 'R'+($index+1)+' '+answer.label); select($index)">
+		</div><!-- end ngRepeat: answer in app.questions[currentQuestionIndex].answers --><div style="opacity: 1; display: block; transform: translateX(0px);" class="question question-3" ng-repeat="answer in app.questions[currentQuestionIndex].answers" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" ng-click="stats('Q'+(currentQuestionIndex+1), 'R'+($index+1)+' '+answer.label); select($index)">
 			<div class="corner-left"></div>
 			<div class="corner-left-txt ng-binding">3</div>
 			<div class="question-text-container"><div class="question-text"><div class="question-text-inner align-right ng-binding">Je veux les deux</div></div></div>
@@ -139,17 +139,17 @@ page.
 	<!-- QUESTIONS FIN -->
 
 	<div class="question-banner-bottom">
-		<div style="opacity: 0;" class="banner-bottom-circle ng-isolate-scope velocity-animating" velocity-transition="{transition: 'fadeIn', delay: 100}">
+		<div style="opacity: 1; display: block;" class="banner-bottom-circle ng-isolate-scope" velocity-transition="{transition: 'fadeIn', delay: 100}">
 			<div class="circle-txt-container align-center">Question<br><span class="question-course ng-binding">1</span></div>
 			<div class="circle-container"></div>
 		</div>
-		<div style="opacity: 0;" class="banner-bottom-left ng-isolate-scope velocity-animating" velocity-transition="{transition: 'fadeIn', delay: 400}">
+		<div style="opacity: 1; display: block;" class="banner-bottom-left ng-isolate-scope" velocity-transition="{transition: 'fadeIn', delay: 400}">
 			<!-- <img src="assets/images/icon-bien-etre.jpg" class="icon-banner-bottom-left">
 			<img src="assets/images/running.jpg" class="img-banner-bottom-left"> -->
 			<!-- <div class="bottom-left-star align-left"><i class="fa fa-gift fa-2x" aria-hidden="true"></i></div>
 			<div class="bottom-left-txt align-left"><span class="txt-orange">Je cherche un cadeau</span></div> -->
 		</div>
-		<div style="opacity: 0;" class="banner-bottom-right ng-isolate-scope velocity-animating" velocity-transition="{transition: 'fadeIn', delay: 400}" ng-click="stats('mail', 'Touchez ici: sélection objets'); go('/results')">
+		<div style="opacity: 1; display: block;" class="banner-bottom-right ng-isolate-scope" velocity-transition="{transition: 'fadeIn', delay: 400}" ng-click="stats('mail', 'Touchez ici: sélection objets'); go('/results')">
 			<div class="bottom-right-star align-right"><i class="fa fa-star fa-2x" aria-hidden="true"></i></div>
 			<div class="bottom-right-txt align-right"><span class="txt-orange">Touchez ici pour découvrir<br>la sélection d'objets connectés<br>d'Orange à porter sur soi.</span></div>
 		</div>
