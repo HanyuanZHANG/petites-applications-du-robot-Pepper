@@ -4,7 +4,9 @@
     <BehaviorDescriptions>
         <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
     </BehaviorDescriptions>
-    <Dialogs />
+    <Dialogs>
+        <Dialog name="serviceDialog" src="serviceDialog/serviceDialog.dlg" />
+    </Dialogs>
     <Resources>
         <File name="index" src="html/index.htm" />
         <File name="index" src="html/index.html" />
@@ -37,7 +39,10 @@
         <File name="timer-base" src="html/timer-base.png" />
         <File name="timer-needle" src="html/timer-needle.png" />
     </Resources>
-    <Topics />
+    <Topics>
+        <Topic name="serviceDialog_enu" src="serviceDialog/serviceDialog_enu.top" topicName="serviceDialog" language="en_US" />
+        <Topic name="serviceDialog_frf" src="serviceDialog/serviceDialog_frf.top" topicName="serviceDialog" language="fr_FR" />
+    </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
     </IgnoredPaths>
