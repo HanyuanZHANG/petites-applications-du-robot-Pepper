@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html style="" class=" js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Orange bloom - Bien être</title>
+        <meta name="description" content="Orange bloom">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="apple-touch-icon" href="http://merch-digital.com.francetelecom.fr/applis/petalbienetre/apple-touch-icon.png">
+        <link rel="stylesheet" href="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/normalize.css">
+        <link rel="stylesheet" href="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/main.css">
+        <script src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/modernizr-2.js"></script>
+        <script src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/jquery_002.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/plugins.js"></script>
+        <script src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/queryloader2.js"></script>
+        <script src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/jquery.js"></script>
+        <script src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/main.js"></script>
+        <script type="text/javascript">         
+          function getQuerystring(key, default_) {
+               if (default_==null) default_="";
+               key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+               var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+               var qs = regex.exec(window.location.href);
+               if(qs == null) return default_; else return qs[1];
+           }
+           
+           var boutique = getQuerystring('boutiqueid');
+           var appli = "petalbienetre";
+          
+         if(boutique&&boutique!=""){
+			boutique=boutique;
+		   }else{
+			boutique="non défini";
+		   }
+
+		   
+		   var domaine="";
+		   if(window.location.host=="merch-digital.com.francetelecom.fr"){
+			domaine="http://merch-digital.com.francetelecom.fr/_lib_commun/stats/";
+		   }else{
+			domaine="http://uc-orange.com/_lib_commun/stats/";
+		   }
+		   
+		  function stats(action, label){
+				document.getElementById("stats").innerHTML = '<img width="1" height="1" src="'+domaine+'stats.php?'
+				  + 'site='  + encodeURIComponent("merch-digital")
+				  + '&subsite=' + encodeURIComponent(appli)
+				  + '&rub=' + encodeURIComponent(label)
+				  + '&source=' + encodeURIComponent(action)
+				  + '&from=' + encodeURIComponent(boutique)
+				  + '&page=' + encodeURIComponent(label)
+				  + '&referrer=' + encodeURIComponent(document.referrer)
+				  + '&Rdm=' + Math.random()
+				  + '" />';
+		  }
+        </script>
+    </head>
+    <body oncontextmenu="return false">
+        <div class="site-wrapper">            
+            <div style="display: block;" id="home" class="panel home">                
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div class="fltl"><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" onmousedown="stats('clics accueil', 'Withings Activité Pop');" class="grid-item tlb-item-2 obj" data-ol="1" data-om="3" data-os="3" data-link="obj-withings-ap">
+							<div class="gi-front">
+								<div class="circle"><span class="obj withings-ap"></span></div>
+								<div class="info">Withings <br>Activité Pop</div>
+							</div>
+                            <div class="gi-back">
+                                <p class="word words-1 hide">Connecté</p>
+                            </div>
+                        </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" onmousedown="stats('clics accueil', 'La 4G');" class="grid-item tlb-item-2 pink" data-ol="2" data-om="4" data-os="4" data-link="obj-la4g">
+                            <div class="gi-front">
+                                <div class="circle"><span class="obj la4g"></span></div>
+                                <div class="info">4G</div>
+                            </div>
+                            <div class="gi-back">
+                                <p class="word words-2 hide">Sport</p>
+							</div>
+						</div><div style="clear: left; width: 221px; height: 221px; margin: 3px; opacity: 1;" class="grid-item tlb-item-2 obj" data-ol="3" data-om="5" data-os="5">
+                            <div class="gi-front">
+                            </div>
+                            <div class="gi-back">
+                            </div>
+                        </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" class="grid-item tlb-item-2 obj" data-ol="4" data-om="6" data-os="6" onmousedown="stats('clics accueil', 'ZeRound');" data-link="obj-zeround">
+                            <div class="gi-front">
+                                <div class="circle"><span class="obj zeround"></span></div>
+                                <div class="info">ZeRound</div>
+                            </div>
+                            <div class="gi-back">
+                                <p class="word words-1 hide">Partout</p>
+                            </div>
+                        </div></div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px; opacity: 1;" class="grid-item-2x2 category-bloc" data-ol="5" data-om="1" data-os="1">
+                        <div class="overlay bien-etre"></div>
+                        <div class="txt-default">
+                            <p>Bien être</p>
+                        </div>
+                        <ul id="home_idle_txt" class="">
+                            <li data-words="words-1">Je suis connecté <br>les mains libres</li>
+                            <li data-words="words-2">Je mesure <br>mon activité quotidienne
+</li>
+                        </ul>
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" class="grid-item obj" data-ol="6" data-om="7" data-os="7" onmousedown="stats('clics accueil', 'My kronoz Zecircle');" data-link="obj-mykronozzc">
+                        <div class="gi-front">
+                            <div class="circle"><span class="obj mykronozzc"></span></div>
+                            <div class="info">My kronoz Zecircle</div>
+                        </div>
+                        <div class="gi-back">
+                            <p class="word words-1 hide">Pratique</p>
+                        </div>
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" onmousedown="stats('clics accueil', 'Le Cloud');" class="grid-item blue obj" data-ol="7" data-om="8" data-os="8" data-link="obj-lecloud">
+                        <div class="gi-front">
+                            <div class="circle"><span class="obj lecloud"></span></div>
+                            <div class="info">Le Cloud</div>
+                        </div>
+                        <div class="gi-back">
+                            <p class="word words-2 hide"></p>
+                        </div>
+                    </div><div style="float: right; width: 448px; height: 448px; min-height: 0px; margin: 3px; opacity: 1;" onmousedown="stats('clics accueil', 'Comparateur');" class="grid-item-2x2" data-ol="8" data-om="2" data-os="2" data-link="obj-comparateur">
+                        <div class="txt-default">
+							<div class="timerh">
+								<p>
+									Trouvez le bracelet qui vous correspond
+									<br><span>en seulement 30 secondes !</span>
+								</p>
+							</div>
+							<div class="timerblock">
+								<div class="timer">
+									<img class="timer-base" alt="" src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/timer-base.png">
+									<img class="timer-needle" alt="" src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/timer-needle.png">
+								</div>
+							</div>
+							<div class="timerb">
+								<p>
+									<span>Cliquez</span> ici pour commencer
+								</p>
+							</div>
+                        </div>
+                        <div class="gi-back">
+                        </div>
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" onmousedown="stats('clics accueil', 'Samsung Gear S2');" class="grid-item obj" data-ol="9" data-om="9" data-os="9" data-link="obj-gears2">
+                        <div class="gi-front">
+                            <div class="circle"><span class="obj gears2"></span></div>
+                            <div class="info">Samsung <br>Gear S2</div>
+                        </div>
+                        <div class="gi-back">
+                            <p class="word words-2 hide">Forme</p>
+                        </div>
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" class="grid-item obj" data-ol="10" data-om="10" data-os="10">
+                        <div class="gi-front">
+                        </div>
+                        <div class="gi-back">
+                        </div>
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" onmousedown="stats('clics accueil', 'Deezer');" class="grid-item green obj" data-ol="11" data-om="11" data-os="11" data-link="obj-deezer">
+                        <div class="gi-front">
+                            <div class="circle"><span class="obj deezer"></span></div>
+                            <div class="info">Deezer</div>
+                        </div>
+                        <div class="gi-back">
+                            <p class="word words-2 hide"></p>
+                        </div>
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" onmousedown="stats('clics accueil', 'Bracelet Ze Fit 2');" class="grid-item obj" data-ol="12" data-om="12" data-os="12" data-link="obj-zefit2">
+                        <div class="gi-front">
+                            <div class="circle"><span class="obj zefit2"></span></div>
+                            <div class="info">Bracelet <br>Ze Fit 2</div>
+                        </div>
+                        <div class="gi-back">
+                            <p class="word words-1 hide"></p>
+                        </div>
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" class="grid-item tablet-only" data-ol="13" data-om="13" data-os="13">
+                        
+                    </div><div style="width: 221px; height: 221px; margin: 3px; opacity: 1;" class="grid-item tablet-only" data-ol="14" data-om="14" data-os="14">
+                        
+                    </div></div> <!-- .grid-wrapper -->
+            </div> <!-- #home -->
+            
+            <!-- objet - la4g -->
+            <div id="obj-la4g" class="panel blue">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big la4g"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>4G</h1><br><br>
+                        <ul class="desc-list">
+                            <li>Musique en streaming </li>
+                            <li>Partage instantané</li>
+                            <li>Publication immédiate de contenu</li>
+                        </ul>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform bgclr-pink pink" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="la4g" data-color="pink"><div class="picto-mail" id="pictomail_la4g"></div><div class="maildebase" id="enveloppe_la4g" onclick='javascript:maildebase("la4g");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_la4g" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_la4g" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-la4g" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="la4g" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_la4g" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" class="grid-item-1x2 obj-video la4g" data-lamp="9" data-ol="5" data-om="5" data-os="8"></div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo la4g" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-1 la4g" data-ol="7" data-om="7" data-os="5">
+                        <span class="spec-txt-1">
+                            Télécharger des aplications <br>instantanément
+                        </span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-2 la4g tablet-hide" data-ol="8" data-om="8" data-os="6">
+                        <span class="spec-txt-1">
+                            Rechercher des informations <br>de manière ultra-fluide
+                        </span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-3 la4g" data-ol="9" data-om="2" data-os="1"></div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-la4g -->
+            
+            <!-- objet - deezer -->
+            <div id="obj-deezer" class="panel blue">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big deezer"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>Deezer</h1><br><br>
+                        <ul class="desc-list">
+                            <li>40 millions de titres à emporter partout</li>
+                            <li>Votre musique en écoute illimitée, sans publicité </li>
+                            <li>Sur votre mobile, tablette, ordinateur ou TV </li>
+                        </ul>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform bgclr-green green" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="deezer" data-color="green"><div class="picto-mail" id="pictomail_deezer"></div><div class="maildebase" id="enveloppe_deezer" onclick='javascript:maildebase("deezer");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_deezer" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_deezer" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-deezer" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="deezer" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_deezer" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" class="grid-item-1x2 obj-video deezer" data-lamp="9" data-ol="5" data-om="5" data-os="8"></div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo deezer" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-1 deezer" data-ol="7" data-om="7" data-os="5">
+                        <span class="spec-txt-1">
+                            35 millions de titres <br>à emporter partout
+                        </span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-2 deezer tablet-hide" data-ol="8" data-om="8" data-os="6">
+                        <span class="spec-txt-1">
+                            Retrouvez vos playlists <br>préférées partout, <br> tout le temps...
+                        </span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-3 deezer" data-ol="9" data-om="2" data-os="1">
+                        <span class="spec-txt-2">
+                            ...et en son haute <br>qualité et sans publicité
+                        </span>
+                    </div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-deezer -->
+
+            <!-- objet - lecloud -->
+            <div id="obj-lecloud" class="panel blue">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big lecloud"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>Le Cloud</h1><br><br>
+                        <ul class="desc-list">
+                            <li>Vos fichiers accessibles depuis tous vos appareils</li>
+                            <li>Vos fichiers vous suivent partout</li>
+                            <li>Sauvegarde, partage</li>
+                        </ul>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform bgclr-blue blue" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="lecloud" data-color="blue"><div class="picto-mail" id="pictomail_lecloud"></div><div class="maildebase" id="enveloppe_lecloud" onclick='javascript:maildebase("lecloud");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_lecloud" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_lecloud" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-lecloud" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="lecloud" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_lecloud" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" class="grid-item-1x2 obj-video lecloud" data-lamp="9" data-ol="5" data-om="5" data-os="8">
+                        <!-- <div class="btn-video"></div> -->
+                    </div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo lecloud" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-1 lecloud" data-ol="7" data-om="7" data-os="5">
+                        <span class="spec-txt-1">
+                            Le Cloud d’Orange <br>pour tout type de fichiers
+                        </span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-2 lecloud tablet-hide" data-ol="8" data-om="8" data-os="6">
+                        <span class="spec-txt-1">
+                            Le cloud d’Orange est <br>accessible sur tous vos écrans
+                        </span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec-3 lecloud" data-ol="9" data-om="2" data-os="1"></div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-lecloud -->
+
+            <!-- objet - withings-ap -->
+            <div id="obj-withings-ap" class="panel">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big withings-ap"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>Withings Activité Pop</h1><br><br>
+                        <ul class="desc-list">
+                            <li>Suivi de l'activité journalière</li>
+                            <li>Alarme silencieuse</li>
+                            <li>Analyse du sommeil </li>
+                            <li>Suivi de vos progrès avec l’application</li>
+                        </ul>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform orange purple" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="withings-ap" data-color="purple"><div class="picto-mail" id="pictomail_withings-ap"></div><div class="maildebase" id="enveloppe_withings-ap" onclick='javascript:maildebase("withings-ap");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_withings-ap" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_withings-ap" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-withings-ap" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="withings-ap" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_withings-ap" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" onmousedown="stats('clics vidéos',  'Withings Activité Pop');" class="grid-item-1x2 obj-video withings-ap" data-videolink="video.html?v=BienEtre_ActivitePop" data-lamp="9" data-ol="5" data-om="5" data-os="8">
+                        <div class="btn-video"></div>
+                    </div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo withings-ap" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec" data-ol="7" data-om="7" data-os="5">
+                        <svg version="1.1" class="fond" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                            <path d="M200.287,346.154c-3.871-55.336,27.465-83.255,61.375-83.255c20.244,0,38.176,10.309,49.374,26.215h0.367 c11.2-15.906,29.134-26.215,49.376-26.215c33.912,0,65.251,27.919,61.378,83.255c-5.806,83.011-69.472,138.684-110.938,138.684 C269.76,484.838,206.094,429.162,200.287,346.154"></path>
+                        </svg>
+                        <span class="picto bluetooth"></span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item tablet-hide" data-ol="8" data-om="8" data-os="6"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item" data-ol="9" data-om="2" data-os="1"></div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-withings-ap -->
+
+            <!-- objet - gears2 -->
+            <div id="obj-gears2" class="panel">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big gears2"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>Samsung Gear S2</h1>
+                        <ul class="desc-list">
+                            <li>Compatible avec les meilleures applications</li>
+                            <li>Capteur d'activité, tacticle</li>
+                            <li>Ultra fine, Plusieurs looks</li>
+                        </ul>     
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform orange purple" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="gears2" data-color="purple"><div class="picto-mail" id="pictomail_gears2"></div><div class="maildebase" id="enveloppe_gears2" onclick='javascript:maildebase("gears2");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_gears2" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_gears2" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-gears2" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="gears2" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_gears2" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" onmousedown="stats('clics vidéos', 'Samsung Gear S2');" class="grid-item-1x2 obj-video gears2" data-videolink="video.html?v=BienEtre_GearS2" data-lamp="9" data-ol="5" data-om="5" data-os="8">
+                        <div class="btn-video"></div>
+                    </div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo gears2" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec" data-ol="7" data-om="7" data-os="5">
+                        <svg version="1.1" class="fond" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                            <path d="M200.287,346.154c-3.871-55.336,27.465-83.255,61.375-83.255c20.244,0,38.176,10.309,49.374,26.215h0.367 c11.2-15.906,29.134-26.215,49.376-26.215c33.912,0,65.251,27.919,61.378,83.255c-5.806,83.011-69.472,138.684-110.938,138.684 C269.76,484.838,206.094,429.162,200.287,346.154"></path>
+                        </svg>
+                        <span class="picto bluetooth"></span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item tablet-hide" data-ol="8" data-om="8" data-os="6"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item" data-ol="9" data-om="2" data-os="1"></div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-gears2 -->
+
+            <!-- objet - zefit2 -->
+            <div id="obj-zefit2" class="panel">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big zefit2"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>Bracelet Ze Fit 2</h1>
+                        <ul class="desc-list">
+                            <li>Bracelet connecté</li>
+                            <li>Suivi de l'activité</li>
+                            <li>Affichage des notifications</li>
+                        </ul>     
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform orange purple" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="zefit2" data-color="purple"><div class="picto-mail" id="pictomail_zefit2"></div><div class="maildebase" id="enveloppe_zefit2" onclick='javascript:maildebase("zefit2");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_zefit2" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_zefit2" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-zefit2" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="zefit2" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_zefit2" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" class="grid-item-1x2" data-ol="5" data-om="5" data-os="8"></div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo zefit2" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec" data-ol="7" data-om="7" data-os="5">
+                        <svg version="1.1" class="fond" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                            <path d="M200.287,346.154c-3.871-55.336,27.465-83.255,61.375-83.255c20.244,0,38.176,10.309,49.374,26.215h0.367 c11.2-15.906,29.134-26.215,49.376-26.215c33.912,0,65.251,27.919,61.378,83.255c-5.806,83.011-69.472,138.684-110.938,138.684 C269.76,484.838,206.094,429.162,200.287,346.154"></path>
+                        </svg>
+                        <span class="picto bluetooth"></span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item tablet-hide" data-ol="8" data-om="8" data-os="6"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item" data-ol="9" data-om="2" data-os="1"></div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-zefit2 -->
+
+            <!-- objet - mykronozzc -->
+            <div id="obj-mykronozzc" class="panel">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big mykronozzc"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>MyKronoz <br>ZeCircle</h1>
+                        <ul class="desc-list">
+                            <li>Capteur d'activité</li>
+                            <li>Design tendance</li>
+                            <li>Applications dédiées </li>
+                        </ul>     
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform orange purple" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="mykronozzc" data-color="purple"><div class="picto-mail" id="pictomail_mykronozzc"></div><div class="maildebase" id="enveloppe_mykronozzc" onclick='javascript:maildebase("mykronozzc");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_mykronozzc" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_mykronozzc" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-mykronozzc" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="mykronozzc" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_mykronozzc" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" class="grid-item-1x2" data-ol="5" data-om="5" data-os="8"></div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo mykronozzc" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec" data-ol="7" data-om="7" data-os="5">
+                        <svg class="fond" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 312 312" enable-background="new 0 0 312 312" xml:space="preserve">
+                            <path d="M49.372,135.351c-1.627-23.259,11.544-34.994,25.797-34.994c8.509,0,16.046,4.333,20.753,11.019h0.154 c4.709-6.686,12.247-11.019,20.754-11.019c14.254,0,27.425,11.735,25.798,34.994c-2.441,34.891-29.201,58.292-46.629,58.292 C78.573,193.643,51.812,170.241,49.372,135.351"></path>
+                            <path d="M169.372,135.351c-1.627-23.259,11.544-34.994,25.797-34.994c8.509,0,16.046,4.333,20.753,11.019h0.154 c4.708-6.686,12.246-11.019,20.754-11.019c14.254,0,27.426,11.735,25.798,34.994c-2.44,34.891-29.2,58.292-46.629,58.292 C198.573,193.643,171.813,170.241,169.372,135.351"></path>
+                        </svg>
+                        <span class="picto bluetooth_pile"></span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item tablet-hide" data-ol="8" data-om="8" data-os="6"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item" data-ol="9" data-om="2" data-os="1"></div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-mykronozzc -->
+
+            <!-- objet - zeround -->
+            <div id="obj-zeround" class="panel">
+                <div style="padding: 0px; width: 1362px;" class="grid-wrapper"><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-big-wrap" data-ol="1" data-om="1" data-os="3">
+                        <span class="obj-big zeround"></span>
+                    </div><div style="width: 448px; height: 448px; min-height: 0px; margin: 3px;" class="grid-item-2x2 obj-description" data-ol="2" data-om="4" data-os="4">
+                        <h1>ZeRound</h1><br><br>
+                        <ul class="desc-list">
+                            <li>Montre connectée</li>
+                            <li>Suivi de l'activité quotidienne</li>
+                            <li>Permet la prise d'appels</li>
+                        </ul>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item desktop-only mailform orange purple" data-ol="3" data-om="9" data-os="9" data-petal="petalbienetre" data-fiche="zeround" data-color="purple"><div class="picto-mail" id="pictomail_zeround"></div><div class="maildebase" id="enveloppe_zeround" onclick='javascript:maildebase("zeround");'><p class="txtmail">Plus d'infos <br>encore ?</p></div><div id="mail_zeround" class="divblocmail"><form style="display:block;width:100%;text-align:center;" action="http://merch-digital.com.francetelecom.fr/mail/mail.php" method="post" class="formmail"><p class="alertmail">adresse mail incorrecte</p><p class="mailtxt">Saisissez votre e-mail:</p><br><input class="inputmail" id="inputmail_zeround" name="to" value="adresse@mail.com" onfocus='if (this.value==this.defaultValue) this.value = ""; idinputmail=this.id;' onblur='if (this.value=="") this.value = this.defaultValue' autocomplete="off" type="text"><br><input name="url" value="http://cb.orange.fr/boutiques/applis/petalbienetre/desktop.html?p=obj-zeround" type="hidden"><input name="appli" value="petalbienetre" type="hidden"><input name="fiche" value="zeround" type="hidden"><input name="idboutique" value="non défini" type="hidden"><input value="Envoyer" type="submit"></form></div><div id="reponse_zeround" class="divblocmail reponsemail" onclick="javascript:renitmail();"><p class="mailtxt">Votre mail est envoyé</p></div></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item close-btn" data-link="home" data-ol="4" data-om="3" data-os="2"></div><div style="width: 448px; height: 221px; margin: 3px;" class="grid-item-1x2" data-ol="5" data-om="5" data-os="8"></div><div style="width: 675px; height: 221px; margin: 3px;" class="grid-item-1x3 obj-photo zeround" data-ol="6" data-om="6" data-os="7"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item obj-spec" data-ol="7" data-om="7" data-os="5">
+                        <svg class="fond" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 312 312" enable-background="new 0 0 312 312" xml:space="preserve">
+                            <path d="M49.372,135.351c-1.627-23.259,11.544-34.994,25.797-34.994c8.509,0,16.046,4.333,20.753,11.019h0.154 c4.709-6.686,12.247-11.019,20.754-11.019c14.254,0,27.425,11.735,25.798,34.994c-2.441,34.891-29.201,58.292-46.629,58.292 C78.573,193.643,51.812,170.241,49.372,135.351"></path>
+                            <path d="M169.372,135.351c-1.627-23.259,11.544-34.994,25.797-34.994c8.509,0,16.046,4.333,20.753,11.019h0.154 c4.708-6.686,12.246-11.019,20.754-11.019c14.254,0,27.426,11.735,25.798,34.994c-2.44,34.891-29.2,58.292-46.629,58.292 C198.573,193.643,171.813,170.241,169.372,135.351"></path>
+                        </svg>
+                        <span class="picto bluetooth_micro"></span>
+                    </div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item tablet-hide" data-ol="8" data-om="8" data-os="6"></div><div style="width: 221px; height: 221px; margin: 3px;" class="grid-item" data-ol="9" data-om="2" data-os="1"></div></div><!-- .grid-wrapper -->
+            </div><!-- #obj-zeround -->
+
+            <!-- #obj-comparateur -->
+            <div id="obj-comparateur" class="panel">
+					<div onclick="document.getElementById('comparateur').contentWindow.document.location.href='comparateur/index.html#/question'" class="comparateurquit" data-link="home"><p>Cliquez ici pour revenir à l'écran d'accueil de la tablette bien-être</p><p class="f">X</p></div>
+					<iframe name="comparateur" id="comparateur" src="Orange%20bloom%20-%20Bien%20%C3%AAtre_fichiers/index.htm" class="comparateur"></iframe>
+            </div><!-- #obj-comparateur -->
+        </div><!-- .site-wrapper -->
+        <div id="stats"></div>
+		<script>
+		if(boutique=="non défini"){
+			document.getElementById("comparateur").src = 'comparateur/index.html#/question?boutiqueid=';
+		}else{
+			document.getElementById("comparateur").src = 'comparateur/index.html#/question?boutiqueid='+boutique;
+		}
+		</script>
+    
+</body></html>
