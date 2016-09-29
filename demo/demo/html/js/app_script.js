@@ -18,25 +18,25 @@ session.subscribeToEvent("Dialog/LastInput", function(text) {
 	}
 });
 
-function language_select(language){
-  $("#"+language).on('click', function(){
+function product_select(product){
+  $("#"+product).on('click', function(){
     // alert('ChangeApps/'+app_name);
-    select_effect(language);
-    session.raiseEvent('chg_lng/Lng', language);
+    select_effect(product);
+    session.raiseEvent('demo/product', product);
   });
 }
 
-function select_effect(language){
+function select_effect(product){
   var audio = document.getElementById("audio");
   audio.play();
-  document.getElementById(language).style.color = "#ff7900";
+  document.getElementById(product).style.color = "#ff7900";
   // document.getElementById(app_name).style.textDecoration = "underline";
 }
 
 $(document).ready(function(){
-  session.raiseEvent('chg_lng/ready', 1);
+  session.raiseEvent('demo/ready', 1);
 
-  language_select("French");
-  language_select("English");
+  product_select("smartband");
+  product_select("smartwatch");
 
 });
