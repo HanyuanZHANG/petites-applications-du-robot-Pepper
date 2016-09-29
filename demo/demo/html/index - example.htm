@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- JQuery, NAOqi and app-specific JS -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/qimessaging_helper.js"></script>
+    <script src="js/app_script.js"></script>
+
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+      /*width: 70%;*/
+      margin: auto;
+    }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main class="container-fluid">
+    <div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+<!--       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li> -->
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <div id="appStore" class="col-sm-12">
+            <div id="VirtualAssistant" class="app-icon col-sm-4" style="background-image: url('img/Cadre_TRAVAIL_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 1</div>
+            </div>
+            <div id="Entertainment" class="app-icon col-sm-4" style="background-image: url('img/Cadre_FUN_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 2</div>
+            </div>
+            <div id="Quizz" class="app-icon col-sm-4" style="background-image: url('img/Cadre_ARGENT_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 3</div>
+            </div>
+            <div id="AccueilOrangeCampus" class="app-icon col-sm-4" style="background-image: url('img/Cadre_TECH_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 4</div>
+            </div>
+            <div id="FaceReco" class="app-icon col-sm-4" style="background-image: url('img/Cadre_MAISON_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 5</div>
+            </div>
+            <div id="Note" class="app-icon col-sm-4" style="background-image: url('img/Cadre_FAMILLE_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 6</div>
+            </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div id="appStore2" class="col-sm-12">
+            <div id="ImageEmotion" class="app-icon col-sm-4" style="background-image: url('img/Cadre_TRAVAIL_Vide_RVB_Fr.png');" >
+                <div class="title-icon">Analyse Image et Emotion</div>
+            </div>
+            <div id="FollowMe" class="app-icon col-sm-4" style="background-image: url('img/Cadre_FUN_Vide_RVB_Fr.png');" >
+                <div class="title-icon">Suis-moi</div>
+            </div>
+            <div id="MvtControl" class="app-icon col-sm-4" style="background-image: url('img/Cadre_ARGENT_Vide_RVB_Fr.png');" >
+                <div class="title-icon">Contrôle mouvement</div>
+            </div>
+            <div id="app4" class="app-icon col-sm-4" style="background-image: url('img/Cadre_TECH_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 2.4</div>
+            </div>
+            <div id="app5" class="app-icon col-sm-4" style="background-image: url('img/Cadre_MAISON_Vide_RVB_Fr.png');" >
+                <div class="title-icon">App 2.5</div>
+            </div>
+            <div id="AboutMe" class="app-icon col-sm-4" style="background-image: url('img/Cadre_FAMILLE_Vide_RVB_Fr.png');" >
+                <div class="title-icon">A propos de moi</div>
+            </div>
+        </div>
+      </div>
+
+      <!-- <div class="item">
+
+      </div> -->
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="padding-top: 30%; width:5%">
+      <span aria-hidden="true">&#x276e;</span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="padding-top: 30%; width:5%">
+      <span aria-hidden="true">&#x276f;</span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+    </main>
+<!--    <button value="NEXT" onclick="$('#accueil').hide();$('#formation').show();"></button>-->
+    <audio id="audio" src="change_screen.ogg" ></audio>
+    <footer></footer>
+    <div id="debug"></div>
+</body>
+</html>
