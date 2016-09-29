@@ -1,0 +1,127 @@
+<flash-message message="message"></flash-message>
+
+<div ng-show="httpProcessing" class="overlay-message-container">
+    <div class="overlay-message">
+        <div class="overlay-icon"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+        <p>Veuillez patienter ...</p>
+    </div>
+</div>
+
+<!-- Modal information -->
+<div class="a-modal-overlay" ng-show="modalInfoOpened" ng-click="modalInfoOpened = false">
+	<div class="a-modal a-modal-mail">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Informations
+				</div>
+			</div>
+			<div class="modal-information align-center">
+				Vous êtes sur la page du bracelet connecté que vous avez choisi de voir en détails.
+				<br/><br/>
+				Vous retrouverez son visuel, son texte explicatif et toutes ses caractéristiques.
+				<br/><br/>
+				Vous pouvez revenir à la page des résultats en cliquant sur l'icône flèche en haut à droite de la page.
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Mail -->
+<div class="a-modal-overlay" ng-show="modalMailOpened" ng-click="modalMailOpened = false">
+	<div class="a-modal a-modal-mail" ng-class="{opened: modalMailOpened}" ng-click="$event.stopPropagation()">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Recevoir la fiche par email
+				</div>
+			</div>
+			<div class="mail-form">
+				<input id="email" type="email" ng-model="email" placeholder="Inscrivez votre email ici">
+				<div class="mention">Votre adresse mail ne sera ni conservée, ni réutilisée</div>
+				<div class="mail-submit align-center" ng-click="stats('mail', 'valider: '+app.products[productIndex].brand+' '+app.products[productIndex].name); sendMail()">Valider <img src="assets/images/email-white.png" class="submit-icon"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal video -->
+<div class="a-modal-overlay" ng-show="modalVideoOpened" ng-click="closeVideo()">
+	<div class="a-modal a-modal-video" ng-click="$event.stopPropagation()">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Video associée au produit
+				</div>
+			</div>
+			<div class="modal-video align-center">
+				<iframe width="640" height="360" ng-src="{{app.trustSrc(videoSelected)}}" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page page-product">
+	<div class="product-banner-top" velocity-transition="{transition: 'slideDownBigIn', delay: 0}">
+		<div class="product-banner-top-inner">
+			<div class="menu-top">
+				<img src="assets/images/arrows.png" class="menu-top-icon" ng-click="stats('clics menu', 'retour'); $back()">
+				<img src="assets/images/home.png" class="menu-top-icon" ng-click="stats('clics menu', 'maison'); go('/')">
+				<img src="assets/images/circle.png" class="menu-top-icon" ng-click="stats('clics menu', 'info'); modalInfoOpened = true">
+			</div>
+			<div class="product-banner-title"><img src="assets/images/clock.png" class="product-banner-icon">Voici la fiche produit détaillée<span class="txt-orange"></span></div>
+		</div>
+	</div>
+
+	<div class="product-display">
+
+		<div class="product-display-left" velocity-transition="{transition: 'slideLeftBigIn', delay: 200}">
+			<div class="product-display-brand">
+				<div class="compare-video" ng-show="app.products[productIndex].video" ng-click="openVideo(app.products[productIndex].video)"><img src="assets/images/play.png" class="compare-video-icon"></div>
+				<div class="display-brand align-center">{{app.products[productIndex].brand}}</div>
+			</div>
+			<div class="product-display-title">
+				<div class="display-title align-center">{{app.products[productIndex].name}}</div>
+			</div>
+			<div class="product-display-image align-center">
+				<img src="assets/images/products/{{app.products[productIndex].image}}" class="display-image">
+			</div>
+			<div class="product-display-description align-center">
+				<div class="description-txt align-center">
+					{{app.products[productIndex].longDescription}}
+				</div>
+			</div>
+		</div>
+
+
+		<div class="product-display-right" velocity-transition="{transition: 'slideRightBigIn', delay: 200}">
+			<div class="product-display-brand">
+				<div class="display-brand align-center">Caractéristiques et fonctionnalités</div>
+			</div>
+			<table class="specs-table">
+			  <!-- <tr>
+			    <td class="specs" valign="top">Prix</td>
+			    <td class="value">{{app.products[productIndex].price}}</td>
+			  </tr> -->
+			  <tr ng-repeat="(spec, value) in app.products[productIndex].specifications">
+			    <td class="specs" valign="top">{{value.label}}</td>
+			    <td class="value">{{value.values | specProductValue}}</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+
+
+
+	<div class="product-banner-bottom" velocity-transition="{transition: 'slideUpBigIn', delay: 0}" ng-click="stats('mail', 'Cliquez ici: '+app.products[productIndex].brand+' '+app.products[productIndex].name); modalMailOpened = true; focusEmailField()" tiki-emit tiki-action="modal-mail-product" tiki-data="{{app.products[productIndex]}}">
+		<div class="banner-bottom-txt-left">
+			<img src="assets/images/email.png" class="product-banner-icon">
+			<span class="txt-orange">Cliquer ici</span> pour recevoir cette fiche technique par email
+		</div>
+		<div class="wave"></div>
+		<!-- <div class="banner-bottom-txt-right align-right">
+		* Compatible avec une sélection de smartphones samsumg<br/>Détails sur la fiche produit
+		</div> -->
+	</div>
+
+</div>

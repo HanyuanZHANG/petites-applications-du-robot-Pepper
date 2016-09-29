@@ -1,0 +1,108 @@
+<p>Open the console...</p>
+<script src="../libs/jquery.min.js"></script>
+<script src="../dist/tiki-client-web+socketio.min.js"></script>
+<script type="text/javascript">
+
+    // Create an instance for tiki
+    window.tiki = new Tiki({
+        socketUrl: 'http://tiki005.local:9000'
+        // socketUrl: 'http://192.168.0.10:9000'
+    });
+
+    // Wait for ready event
+    tiki.ready(function() {
+
+        // Welcome message
+        console.log('Connected to : '+tiki.opts.socketUrl+' !')
+
+        // Setup postures
+        var random_postures = ['welcome-left-hand', 'welcome-right-hand', 'welcome-left-hand-next', 'welcome-right-hand-next', 'come-on', 'touch-right-hand', 'touch-left-hand', 'show-tablet'];
+
+        // // Speak example
+        // tiki.speak({
+        //     txt: 'Hello there, my name is TiKi ! I would like to introduce a service which can identify the best clothes to flatter your body shape. ',
+        //     lang: "en-us-jennifer-female",
+        //     speed: "default"
+        // }, function(err, obj) {
+        //     console.log('said :', obj)
+        //     tiki.posture(tiki.smartSample(random_postures));
+        //     tiki.speak({
+        //         txt: 'Curvetips looks at hundreds of details in clothing to evaluate how they will visualy look on your body.',
+        //         lang: "en-us-jennifer-female",
+        //         speed: "default"
+        //     })
+        //     tiki.face({
+        //         name: 'eye-blink'
+        //     }, function(err, obj) {
+        //         console.log('Set face to :', obj)
+        //     });
+        // });
+
+        // Call a posture
+        tiki.posture({
+            name: tiki.smartSample(random_postures),
+            speed: 'slow'
+        }, function(err, obj) {
+            console.log('Posture moving to :', obj)
+        });
+
+        tiki.on('driver:board:face:templates', function(datas) {
+            console.log(datas)
+
+            d = _.map(datas, function(_d) {
+                return [_d.name, _d.id]
+            })
+            d = _.sortBy(d, function(_d) {
+                return _d[0]
+            })
+            console.log(JSON.stringify(d))
+        })
+        tiki.emitEvent('driver:board:face:announce:templates');
+
+
+        // app.socket.emit('driver:board:face:announce:templates')
+
+        // Animate face
+        tiki.face({
+            name: 'eye-rest'
+        }, function(err, obj) {
+            console.log('Set face to :', obj)
+        });
+
+        // Say something
+        tiki.speak({
+            txt: 'Salut !'
+        }, function(err, obj) {
+            console.log('Speak complete :', obj)
+        });
+
+        // Move face top after 1000ms
+        setTimeout(function() {
+            tiki.move([
+                {
+                    name: 'face.elevation',     // Name of the actuator
+                    progress: 100,              // 0 -100
+                    speed: 'fast'               // Move speed
+                },
+                {
+                    name: 'face.rotation',     // Name of the actuator
+                    progress: 80,              // 0 -100
+                    speed: 'fast'               // Move speed
+                }
+            ])
+            // tiki.faceText('tiki')               // Print TIKI on the face
+        }, 1000)
+
+    });
+
+    // When connected
+    tiki.once('connecting', function(obj) {
+        console.log("Connecting to :", obj)
+    });
+
+    // Watch for disconnect event
+    tiki.on('disconnect', function() {
+        console.log('Instance is disconnected !')
+    });
+
+</script>

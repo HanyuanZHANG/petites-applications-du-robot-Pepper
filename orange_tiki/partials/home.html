@@ -1,0 +1,21 @@
+<flash-message message="message"></flash-message>
+
+<div class="page page-home">
+	<div class="home-banner-top" velocity-transition="{transition: 'bounceLeftIn', delay: 0}">
+		<!-- <div class="txt-container">
+			<div class="align-center text-small">Et si vous deviez acheter une montre ou un bracelet connecté,</div>
+			<div class="align-center text-big"><span class="txt-orange">lequel serait-il ?</span></div>
+		</div> -->
+	</div>
+	<div class="home-banner-middle" velocity-transition="{transition: 'bounceRightIn', delay: 400}" ng-click="go('/question')">
+		<img src="assets/images/logo-bien-etre-base.png" alt="Bien-être" class="logo-bien-etre">
+		<div class="txt-container align-center" ng-show="textIndex == 0">Bien-être</div>
+		<div class="txt-container align-center" ng-show="textIndex == 1">Rester connecté</br>les mains libres</div>
+		<div class="txt-container align-center" ng-show="textIndex == 2">Mesurer</br>mon activité</br>quotidienne</div>
+	</div>
+	<div class="home-banner-bottom" velocity-transition="{transition: 'bounceLeftIn', delay: 800}" ng-click="go('/question')">
+		<div class="txt-container">
+			<div class="align-center text-small"><span class="txt-orange">Touchez l'écran</span></div>
+		</div>
+	</div>
+</div>

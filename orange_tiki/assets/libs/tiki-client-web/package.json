@@ -1,0 +1,32 @@
+{
+  "name": "tiki-client-web",
+  "version": "1.0.0",
+  "description": "Client JS API for TiKi",
+  "main": "index.coffee",
+  "repository": {
+    "type": "git",
+    "url": "git@git.event-bots.com:eb/tiki-client-web.git"
+  },
+  "scripts": {
+    "clean": "node_modules/rimraf/bin.js ./dist && mkdir dist && node_modules/rimraf/bin.js ./test/dist && mkdir test/dist",
+    "prebuild": "npm run clean",
+    "build:css": "stylus test/styles/main.styl -o test/dist/bundle.css",
+    "watch:css": "watch 'npm run build:css' test/styles/",
+    "build:jsfull": "node_modules/babel-cli/bin/babel.js libs/socket.io.js libs/lodash.custom.js src/index.js --out-file dist/tiki-client-web+socketio.min.js --source-maps --minified --no-comments",
+    "build:jslight": "node_modules/babel-cli/bin/babel.js libs/lodash.custom.js src/index.js --out-file dist/tiki-client-web.min.js --source-maps --minified --no-comments",
+    "build:js": "parallelshell 'npm run build:jsfull' 'npm run build:jslight'",
+    "watch:js": "watch 'npm run build:js' src/",
+    "build": "npm run prebuild && npm run build:js && npm run build:css",
+    "build:watch": "npm run prebuild && parallelshell 'npm run watch:js' 'npm run watch:css'"
+  },
+  "author": "EventBots",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "latest",
+    "live-reload": "latest",
+    "parallelshell": "latest",
+    "rimraf": "latest",
+    "stylus": "latest",
+    "watch": "latest"
+  }
+}

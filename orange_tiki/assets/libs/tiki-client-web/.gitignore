@@ -1,0 +1,4 @@
+node_modules/*
+test/components/*
+
+npm-debug.log

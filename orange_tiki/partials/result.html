@@ -1,0 +1,94 @@
+<flash-message message="message"></flash-message>
+
+<!-- Modal information -->
+<div class="a-modal-overlay" ng-show="modalInfoOpened" ng-click="modalInfoOpened = false">
+	<div class="a-modal a-modal-mail">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Informations
+				</div>
+			</div>
+			<div class="modal-information align-center">
+				Retrouvez ici tous les résultats correspondants à vos réponses précédentes.
+				<br/><br/>
+				Vous pouvez recommencer le questionnaire en cliquant sur l'icône "Maison" en haut à droite de la page.
+				<br/><br/>
+				Vous pouvez également cliquer sur 2 à 3 bracelets connectés pour ensuite les comparer en cliquant sur le bandeau en bas à gauche.
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal video -->
+<div class="a-modal-overlay" ng-show="modalVideoOpened" ng-click="closeVideo()">
+	<div class="a-modal a-modal-video" ng-click="$event.stopPropagation()">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Video associée au produit
+				</div>
+			</div>
+			<div class="modal-video align-center">
+				<iframe width="640" height="360" ng-src="{{app.trustSrc(videoSelected)}}" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page page-results">
+	<div class="results-banner-top" velocity-transition="{transition: 'slideDownBigIn', delay: 0}">
+		<div class="results-banner-top-inner">
+			<div class="menu-top">
+				<img src="assets/images/home.png" class="menu-top-icon" ng-click="stats('clics menu', 'maison'); app.goTo('/')">
+				<img src="assets/images/circle.png" class="menu-top-icon" ng-click="stats('clics menu', 'info'); modalInfoOpened = true" tiki-emit tiki-action="results-infos">
+			</div>
+			<div class="results-banner-title"><img src="assets/images/clock.png" class="results-banner-icon">
+				<span ng-show="isFiltered(app.products, app.filters)">Voici les bracelets qui correspondent à vos choix<span class="txt-orange"></span></span>
+				<span ng-hide="isFiltered(app.products, app.filters)">Voici une sélection de bracelets qui pourraient vous intéresser<span class="txt-orange"></span></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Products Carousel -->
+	<div class="results-display">
+		<div class="results-display-box" ng-class="{selected: isInCompareList(product)}" ng-repeat="product in app.products | specsFilter: app.filters" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" horizontal-position="{{$index}}" ng-click="addToCompareList(product)" tiki-emit tiki-action="product-select" tiki-data="{{product}}">
+			<div class="results-display-brand">
+				<div class="results-check" ng-class="{faded: !isInCompareList(product)}"><img ng-src="assets/images/check{{(isInCompareList(product))?'-full':''}}.png" class="results-check-icon"></div>
+				<div class="results-video" ng-show="product.video" ng-click="openVideo(product.video); $event.stopPropagation()"><img src="assets/images/play.png" class="results-video-icon"></div>
+				<div class="display-brand-txt align-center">{{product.brand}}</div>
+			</div>
+			<div class="results-display-title">
+				<div class="display-title-txt align-center">{{product.name}}</div>
+			</div>
+			<div class="results-display-image align-center">
+				<img ng-src="assets/images/products/{{product.image}}" class="display-image">
+			</div>
+			<!-- <div class="results-display-price align-center">{{product.price}}</div> -->
+			<div class="results-display-excerpt align-center">
+				<div class="display-excerpt-txt align-center">{{product.shortDescription}}</div>
+			</div>
+			<div class="results-display-os align-center">
+				<img src="assets/images/ios.png" class="display-os" ng-show="product.specifications.os.values.ios">
+				<img src="assets/images/android.png" class="display-os" ng-show="product.specifications.os.values.android">
+				<img src="assets/images/windowsphone.png" class="display-os" ng-show="product.specifications.os.values.windowsphone">
+			</div>
+			<div class="results-display-more">
+				<div class="display-more-button align-center" ng-click="stats('En savoir plus', product.brand+' '+product.name); app.goTo('/product/' + product.id); $event.stopPropagation()" tiki-emit tiki-action="product" tiki-data="{{product}}"><div class="display-more-txt">En savoir plus</div></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="results-banner-bottom" velocity-transition="{transition: 'slideUpBigIn', delay: 0}" ng-click="stats('clics menu', 'Comparez'); openCompare()">
+		<div class="banner-bottom-txt-left">
+			<img src="assets/images/zoom.png" class="results-banner-icon">
+			<span ng-show="countCompareList() < 3"><span class="txt-orange txt-bold">Comparez</span> en sélectionnant au maximum 3 produits</span>
+			<span ng-show="countCompareList() === 3"><span class="txt-orange txt-bold">Comparez</span> votre séléction en cliquant ici</span>
+		</div>
+		<div class="wave"></div>
+		<!-- <div class="banner-bottom-txt-right align-right">
+			* Prix à titre indicatif<br/>Voir détails en magasin
+		</div> -->
+	</div>
+
+</div>

@@ -1,0 +1,185 @@
+<flash-message message="message"></flash-message>
+
+<div ng-show="httpProcessing" class="overlay-message-container">
+    <div class="overlay-message">
+        <div class="overlay-icon"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+        <p>Veuillez patienter ...</p>
+    </div>
+</div>
+
+<!-- Modal information -->
+<div class="a-modal-overlay" ng-show="modalInfoOpened" ng-click="modalInfoOpened = false">
+	<div class="a-modal a-modal-mail">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Informations
+				</div>
+			</div>
+			<div class="modal-information align-center">
+				Vous pouvez choisir de comparer 2 ou 3 bracelets connectés différents.
+				<br/><br/>
+				Revenez en arrière avec l'icône flèche située en haut à droite de la page pour modifier les objets à comparer.
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Mail -->
+<div class="a-modal-overlay" ng-show="modalMailOpened" ng-click="modalMailOpened = false">
+	<div class="a-modal a-modal-mail" ng-class="{opened: modalMailOpened}" ng-click="$event.stopPropagation()">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Recevoir la fiche par email
+				</div>
+			</div>
+			<div class="mail-form">
+				<input id="email" type="email" ng-model="email" placeholder="Inscrivez votre email ici">
+				<div class="mention">Votre adresse mail ne sera ni conservée, ni réutilisée</div>
+				<div class="mail-submit align-center" ng-click="stats('mail', 'valider: tableau comparatif'); sendMail()">Valider <img src="assets/images/email-white.png" class="submit-icon"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal video -->
+<div class="a-modal-overlay" ng-show="modalVideoOpened" ng-click="closeVideo()">
+	<div class="a-modal a-modal-video" ng-click="$event.stopPropagation()">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Video associée au produit
+				</div>
+			</div>
+			<div class="modal-video align-center">
+				<iframe width="640" height="360" ng-src="{{app.trustSrc(videoSelected)}}" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page page-compare">
+	<div class="compare-banner-top" velocity-transition="{transition: 'slideDownBigIn', delay: 0}">
+		<div class="compare-banner-top-inner">
+			<div class="menu-top">
+				<img src="assets/images/arrows.png" class="menu-top-icon" ng-click="stats('clics menu', 'retour'); $back()">
+				<img src="assets/images/home.png" class="menu-top-icon" ng-click="stats('clics menu', 'maison'); go('/')">
+				<img src="assets/images/circle.png" class="menu-top-icon" ng-click="stats('clics menu', 'info'); modalInfoOpened = true" tiki-emit tiki-action="compare-infos">
+			</div>
+			<div class="compare-banner-title"><img src="assets/images/clock.png" class="compare-banner-icon"><span class="txt-orange"></span>Comparaison de votre sélection</div>
+		</div>
+	</div>
+
+	<div class="compare-display">
+		<div class="compare-display-box-legend" velocity-transition="{transition: 'slideRightBigIn', delay: 0}">
+			<div class="compare-display-brand">
+				<div class="display-brand-txt align-center">Votre sélection</div>
+			</div>
+			<div class="compare-display-excerpt align-center">
+				<div class="display-excerpt-txt align-center">Retrouvez ici les montres que vous avez sélectionnées.<br/><br/>
+				 Vous pouvez comparer leurs fonctionnalités et leurs caractéristiques techniques.</div>
+			</div>
+			<!-- <div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Prix</div>
+			</div> -->
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Type de montre</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Affiche l'heure</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Podomètre (pas et distance parcourue)</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Mesure fréquence cardiaque</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Calories brulées</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Suivi du sommeil</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Affiche les notifications</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Option décrocher/raccrocher</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Contrôle de la musique</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Contrôle de l'appareil photo</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Haut-parleurs (musique et voix)</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Déclencher des actions par la voix</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Résistance à l'eau (éclaboussures)</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Etanchéité (nage)</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">GPS</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Boîtier</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Autonomie</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Système d'exploitation</div>
+			</div>
+			<div class="compare-display-specs align-center">
+				<div class="specs-excerpt-txt align-center">Bluetooth/processeur</div>
+			</div>
+			<div class="compare-product-last align-center">
+				<div class="specs-product-last align-center"></div>
+			</div>
+		</div>
+		<div class="compare-display-box-product" ng-repeat="product in app.compareList" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}">
+			<div class="compare-display-brand">
+				<div class="compare-video" ng-show="product.video" ng-click="openVideo(product.video); $event.stopPropagation()"><img src="assets/images/play.png" class="compare-video-icon"></div>
+				<div class="display-brand-txt align-center">{{product.brand}}</div>
+			</div>
+			<div class="compare-display-title">
+				<div class="display-title-txt align-center">{{product.name}}</div>
+			</div>
+			<div class="compare-display-image align-center">
+				<img ng-src="assets/images/products/{{product.image}}" class="display-image">
+			</div>
+			<!-- <div class="compare-product-specs align-center">
+				<div class="specs-product-txt align-center">{{product.price}}</div>
+			</div> -->
+			<div class="compare-product-specs align-center" ng-repeat="spec in product.specifications">
+				<div class="specs-product-txt align-center">{{spec.values | specProductValue}}</div>
+			</div>
+			<div class="compare-product-last align-center">
+				<div class="specs-product-last align-center"></div>
+			</div>
+			<div class="compare-display-more">
+				<div class="display-more-button align-center" ng-click="stats('En savoir plus', product.brand+' '+product.name); go('/product/' + product.id)" tiki-emit tiki-action="product" tiki-data="{{product}}"><div class="display-more-txt">Voir la fiche produit</div></div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="compare-banner-bottom" velocity-transition="{transition: 'slideUpBigIn', delay: 0}" ng-click="stats('mail', 'Cliquez ici: tableau comparatif'); modalMailOpened = true; focusEmailField()" tiki-emit tiki-action="modal-mail-selection" tiki-data="{{app.compareList}}">
+		<div class="banner-bottom-txt-left"><img src="assets/images/email.png" class="compare-banner-icon">
+			<span class="txt-orange">Cliquer ici</span> pour recevoir cette fiche par email
+		</div>
+		<div class="wave"></div>
+		<div class="banner-bottom-txt-right align-right">
+			* Compatible avec une sélection de smartphones samsumg<br/>Détails sur la fiche produit
+		</div>
+	</div>
+
+</div>

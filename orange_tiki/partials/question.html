@@ -1,0 +1,62 @@
+<flash-message message="message"></flash-message>
+
+<!-- Modal information -->
+<div class="a-modal-overlay" ng-show="modalInfoOpened" ng-click="modalInfoOpened = false">
+	<div class="a-modal a-modal-mail">
+		<div class="a-modal-inner">
+			<div class="modal-title-box">
+				<div class="modal-title align-center">
+					Informations
+				</div>
+			</div>
+			<div class="modal-information align-center">
+				Laissez vous guider par les questions afin de trouver le ou les bracelets connectés qui vous correspondent.
+				<br/>
+				<br/>
+				Si vous pensez avoir fait une erreur, vous pouvez recommencer le questionnaire en cliquant sur l'icône "Maison" en haut à droite de la page.
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page page-question">
+	<div class="question-banner-top" velocity-transition="{transition: 'slideDownBigIn', delay: 0}">
+		<div class="question-banner-top-inner">
+			<div class="menu-top">
+				<img src="assets/images/arrows.png" class="menu-top-icon" ng-click="prevQuestion()" ng-if="currentQuestionIndex > 0">
+				<img src="assets/images/home.png" class="menu-top-icon" ng-click="stats('clics menu', 'maison'); go('/home')">
+				<img src="assets/images/circle.png" class="menu-top-icon" ng-click="stats('clics menu', 'info'); modalInfoOpened = true">
+			</div>
+			<div class="question-banner-title"><img src="assets/images/clock.png" class="question-banner-icon">Trouvez le bracelet qui vous correspond en seulement 30 secondes !<span class="txt-orange"></span></div>
+		</div>
+	</div>
+
+	<!-- QUESTIONS DEBUT -->
+	<div class="questions">
+		<div class="question question-{{app.questions[currentQuestionIndex].answers.length}}" ng-class="{'clicked': $index == selectedIndex }" ng-repeat="answer in app.questions[currentQuestionIndex].answers" velocity-transition="{transition: 'slideRightBigIn', delay: 200 * $index}" ng-click="stats('Q'+(currentQuestionIndex+1), 'R'+($index+1)+' '+answer.label); select($index)" tiki-emit tiki-action="question" tiki-data="{{answer}}">
+			<div class="corner-left"></div>
+			<div class="corner-left-txt">{{($index + 1)}}</div>
+			<div class="question-text-container"><div class="question-text"><div class="question-text-inner align-right">{{answer.label}}</div></div></div>
+			<div class="question-image-container" style="background-image: url(assets/images/questions/{{answer.image}})"></div>
+		</div>
+	</div>
+	<!-- QUESTIONS FIN -->
+
+	<div class="question-banner-bottom">
+		<div class="banner-bottom-circle" velocity-transition="{transition: 'fadeIn', delay: 100}">
+			<div class="circle-txt-container align-center">Question<br/><span class="question-course">{{(app.filters.length + 1)}}</span></div>
+			<div class="circle-container"></div>
+		</div>
+		<div class="banner-bottom-left" velocity-transition="{transition: 'fadeIn', delay: 400}">
+			<!-- <img src="assets/images/icon-bien-etre.jpg" class="icon-banner-bottom-left">
+			<img src="assets/images/running.jpg" class="img-banner-bottom-left"> -->
+			<!-- <div class="bottom-left-star align-left"><i class="fa fa-gift fa-2x" aria-hidden="true"></i></div>
+			<div class="bottom-left-txt align-left"><span class="txt-orange">Je cherche un cadeau</span></div> -->
+		</div>
+		<div class="banner-bottom-right" velocity-transition="{transition: 'fadeIn', delay: 400}" ng-click="stats('mail', 'Touchez ici: sélection objets'); go('/results')">
+<!-- 			<div class="bottom-right-star align-right"><i class="fa fa-star fa-2x" aria-hidden="true"></i></div>
+			<div class="bottom-right-txt align-right"><span class="txt-orange">Touchez ici pour découvrir<br/>la sélection d'objets connectés<br/>d'Orange à porter sur soi.</span></div>
+ -->		</div>
+	</div>
+
+</div>
