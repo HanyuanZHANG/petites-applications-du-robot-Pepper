@@ -15,7 +15,7 @@
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
                     <Diagram>
-                        <Box name="Dialog" id="3" localization="8" tooltip="An example of multilanguage dialog implementation" x="304" y="228">
+                        <Box name="Dialog" id="3" localization="8" tooltip="An example of multilanguage dialog implementation" x="226" y="153">
                             <dialogFile>ExampleDialog/ExampleDialog.dlg</dialogFile>
                             <bitmap>media/images/box/box-dialog.png</bitmap>
                             <script language="4">
@@ -31,7 +31,7 @@
                             <Resource name="Speech" type="Lock" timeout="0" />
                             <Resource name="Speech recognition" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="295" y="45">
+                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="227" y="33">
                             <bitmap>media/images/box/root.png</bitmap>
                             <script language="4">
                                 <content>
