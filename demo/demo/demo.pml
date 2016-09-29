@@ -7,6 +7,8 @@
     <Dialogs>
         <Dialog name="ExampleDialog" src="behavior_1/ExampleDialog/ExampleDialog.dlg" />
         <Dialog name="serviceDemande" src="serviceDemande/serviceDemande.dlg" />
+        <Dialog name="montre" src="montre/montre.dlg" />
+        <Dialog name="bracelet" src="bracelet/bracelet.dlg" />
     </Dialogs>
     <Resources>
         <File name="Click2-Sebastian-759472264" src="html/Click2-Sebastian-759472264.mp3" />
@@ -167,6 +169,10 @@
         <Topic name="ExampleDialog_frf" src="behavior_1/ExampleDialog/ExampleDialog_frf.top" topicName="ExampleDialog" language="fr_FR" />
         <Topic name="serviceDemande_enu" src="serviceDemande/serviceDemande_enu.top" topicName="serviceDemande" language="en_US" />
         <Topic name="serviceDemande_frf" src="serviceDemande/serviceDemande_frf.top" topicName="serviceDemande" language="fr_FR" />
+        <Topic name="montre_enu" src="montre/montre_enu.top" topicName="montre" language="en_US" />
+        <Topic name="montre_frf" src="montre/montre_frf.top" topicName="montre" language="fr_FR" />
+        <Topic name="bracelet_enu" src="bracelet/bracelet_enu.top" topicName="bracelet" language="en_US" />
+        <Topic name="bracelet_frf" src="bracelet/bracelet_frf.top" topicName="bracelet" language="fr_FR" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
