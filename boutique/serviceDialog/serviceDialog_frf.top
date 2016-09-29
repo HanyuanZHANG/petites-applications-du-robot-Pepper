@@ -9,3 +9,14 @@ language: frf
 
 # Replying to speech
 #u:(~hello) ~hello
+concept:(4G) [4G "quatre G"]
+concept:(cloud) [cloud "orange cloud" "le cloud"]
+concept:(montre) [montre "montre intélligente" "montre connecté"]
+concept:(bracelet) [bracelet "bracelet intélligent" "bracelet connecté"]
+concept:(Samsung Gear S2) ["Samsung Gear S2" "Gear S2"]
+concept:(zeRound) [zeRound]
+concept:(deezer)[deezer]
+
+
+
+u:(e:onStart) Vous vous intéressez à quel produit?

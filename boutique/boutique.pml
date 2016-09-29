@@ -41,7 +41,7 @@
     </Resources>
     <Topics>
         <Topic name="serviceDialog_enu" src="serviceDialog/serviceDialog_enu.top" topicName="serviceDialog" language="en_US" />
-        <Topic name="serviceDialog_frf" src="serviceDialog/serviceDialog_frf.top" topicName="serviceDialog" language="fr_FR" />
+        <Topic name="serviceDialog_frf" src="serviceDialog/serviceDialog_frf.top" topicName="" language="C" />
     </Topics>
     <IgnoredPaths>
         <Path src=".metadata" />
