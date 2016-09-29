@@ -1,4 +1,4 @@
-topic: ~DialogMulitlingual()
+topic: ~ExampleDialog()
 language: frf
 
 # Defining extra concepts out of words or group of words
@@ -9,10 +9,3 @@ language: frf
 
 # Replying to speech
 #u:(~hello) ~hello
-
-u:(e:onStart) Bonjour ! ^switchFocus(testClgConnect/behavior_1,chg_lng/Lng )
-
-u:(au revoir)
-    "au revoir"
-    $onStopped=1
-    $chg_lng/restart=1

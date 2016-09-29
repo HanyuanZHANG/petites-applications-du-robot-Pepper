@@ -18,7 +18,7 @@
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
                     <Diagram>
-                        <Box name="Dialog" id="3" localization="8" tooltip="An example of multilanguage dialog implementation" x="582" y="285">
+                        <Box name="Dialog" id="3" localization="8" tooltip="An example of multilanguage dialog implementation" x="759" y="350">
                             <dialogFile>ExampleDialog/ExampleDialog.dlg</dialogFile>
                             <bitmap>media/images/box/box-dialog.png</bitmap>
                             <script language="4">
@@ -34,7 +34,7 @@
                             <Resource name="Speech" type="Lock" timeout="0" />
                             <Resource name="Speech recognition" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Set to default" id="1" localization="8" tooltip="Select the language you would like the robot to speak and understand. Any following call to&#x0A;ALSpeechRecognition (Speech Reco. box for instance) or ALTextToSpeech (Say box&#x0A;for instance) will use this language." x="387" y="141">
+                        <Box name="Set to default" id="1" localization="8" tooltip="Select the language you would like the robot to speak and understand. Any following call to&#x0A;ALSpeechRecognition (Speech Reco. box for instance) or ALTextToSpeech (Say box&#x0A;for instance) will use this language." x="435" y="157">
                             <bitmap>media/images/box/interaction/say.png</bitmap>
                             <script language="4">
                                 <content>
@@ -119,7 +119,7 @@
 </content>
                             </script>
                             <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
                             <Output name="playAGame" type="1" type_size="1" nature="2" inner="0" tooltip="stimulated using $playAGame=1 in qiChat script when User wants to play a game&#x0A;" id="5" />
@@ -168,7 +168,7 @@
                 self.dialog.setLanguage( lang ) #self.getParameter("Language") )
             if self.tts is None and self.asr is None and self.dialog is None:
                 raise RuntimeError("Cannot set language: neither ALTextToSpeech nor ALSpeechRecognition nor ALDialog is available.")
-            self.onReady()
+            self.onReady(lang)
         except:
             error = "Language " + lang + " cannot be set."
             self.logger.warn(error)
@@ -177,10 +177,10 @@
                             </script>
                             <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                             <Input name="onSet" type="3" type_size="1" nature="1" inner="0" tooltip="" id="2" />
-                            <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when the data has been set." id="3" />
+                            <Output name="onReady" type="3" type_size="1" nature="2" inner="0" tooltip="Signal sent when the data has been set." id="3" />
                             <Output name="onError" type="3" type_size="1" nature="2" inner="0" tooltip="Error output:&#x0A;- triggered if the language asked cannot be set" id="4" />
                         </Box>
-                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="173" y="29">
+                        <Box name="Show App" id="2" localization="8" tooltip="Loads the application on the tablet, if it exists, and displays the webview.&#x0A;&#x0A;V1.0.0&#x0A;" x="307" y="21">
                             <bitmap>media/images/box/root.png</bitmap>
                             <script language="4">
                                 <content>
@@ -241,13 +241,12 @@ class MyClass(GeneratedClass):
                             <Output name="onFailure" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished unsuccessfully." id="4" />
                         </Box>
                         <Link inputowner="3" indexofinput="2" outputowner="1" indexofoutput="3" />
-                        <Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="3" />
-                        <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="6" />
                         <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="4" />
                         <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="5" />
-                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="6" />
                         <Link inputowner="3" indexofinput="3" outputowner="0" indexofoutput="5" />
-                        <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="6" />
+                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="3" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
