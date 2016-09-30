@@ -1,0 +1,64 @@
+topic: ~boutique()
+language: frf
+
+concept:(bonjour) [bonjour]
+concept:(oui) [oui "ça va" "d'accord"]
+concept:(no) [non no]
+concept:(montre)[{la}montre "montre connectée" "montre intélligente"]
+concept:(bracelet)[{le}bracelet "bracelet connecté"]
+concept:(appel)[{prendre}{les}[appels appel]]
+concept:(navigation)[{les}navigation{"des applications"}]
+concept:(mesure)[mesurer mesure {"la fréquence cardiaque"} cardiaque]
+concept:(nager)[natation nager]
+
+
+u:(e:onStart)Bonjour, nous vous proposons les produits montres connectées et les bracelets, quel type de produit que vous préférez savoir plus? 
+    u1:(~montre)$montre=1
+    u1:(~bracelet)$bracelet=1
+
+#pour les montres    
+u:(e:montre)Pour que la montre soit compatible avec votre smartphone, veuillez sélectionner le système que vous utiliser, Android ou iOS?
+    u1:(Android) ^gotoReactivate(demandeUtiA)
+    u1:(iOS) ^gotoReactivate(demandeUtiiOS)
+
+#pour les montres android    
+proposal:%demandeUtiA OK, selon votre utilisation, vous préférez utiliser la montre pour prendre les appels ou naviguer les applications?
+    u1:([~appel ~navigation])selon votre mode d'utilisation, nous vous proposons ces montres suivantes: Samsung Gear S2, ZeRound, ZeClock, ZeWatch 3, LG watch, smartwatch 3 et Huawei Watch. Vous pourriez appuyer "en savoir plus" pour regarder les détails. ^gotoReactivate(demandeMAndroid)
+       
+proposal: %demandeMAndroid Quelle montre vous aimez plus?
+    u1:(_*)OK, votre préférence est bien noté que vous aimez plus le $1
+    
+
+    
+      
+#pour les montres iOS    
+proposal:%demandeUtiiOS OK, selon votre utilisation, vous préférez utiliser la montre pour prendre les appels ou naviguer les applications?
+    u1:([~appel ~navigation])selon votre mode d'utilisation, nous vous proposons ces montres suivantes: iWatch, ZeRound, ZeClock, ZeWatch 3, et Huawei Watch. Vous pourriez appuyer "en savoir plus" pour regarder les détails. ^gotoReactivate(demandeMiOS)
+    
+proposal: : %demandeMiOS Quelle montre vous aimez plus?
+    u1:(_[iWatch ZeRound ZeClock "ZeWatch 3" "Huawei Watch"])OK, votre préférence est bien noté que vous aimez plus le $1
+    
+    
+    
+###############################################################################################    
+#pour les bracelets    
+u:(e:bracelet)Pour que le bracelet soit compatible avec votre smartphone, veuillez sélectionner le système que vous utiliser, Android ou iOS?
+    u1:([Android iOS]) ^gotoReactivate(demandeUtiBracelet)
+    
+    
+#pour les bracelets android et iOS    
+proposal:%demandeUtiBracelet OK, selon votre utilisation, vous préférez utiliser le bracelet pour mesurer la fréquence cardiaque ou vous voulez nager avec votre bracelet?
+    u1:(~mesure)selon votre mode d'utilisation, nous vous proposons ces bracelets suivantes: ZeFit 2 Pulse et Fit Charge HR. Vous pourriez appuyer "en savoir plus" pour regarder les détails. ^gotoReactivate(demandeBraMe)
+    u1:(~nager)selon votre mode d'utilisation, nous vous proposons ces bracelets suivantes: Withings Pop et Polar M400. Vous pourriez appuyer "en savoir plus" pour regarder les détails. ^gotoReactivate(demandeBraNa)
+       
+proposal: % demandeBraMe Quelle montre vous aimez plus?
+    u1:(_["ZeFit 2 Pulse" "Fit Charge HR"])OK, votre préférence est bien noté que vous aimez plus le $1.
+    
+proposal: % demandeBraNa Quelle montre vous aimez plus?
+    u1:(_["Withings Pop" "Polar M400"])OK, votre préférence est bien noté que vous aimez plus le $1.
+       
+
+                
+                
+    
+      

@@ -1,0 +1,66 @@
+topic: ~boutique()
+language: enu
+
+
+
+concept:(hello) [hi hello]
+concept:(yes) [yes ok]
+concept:(no) [no]
+concept:(montre)[watch smartwatch]
+concept:(bracelet)[band smartband]
+concept:(appel)[{[take make]}{the}[calls phonecalls]]
+concept:(navigation)[{[use navigate broser]}applications]
+concept:(mesure)[measure {"heart rate"} heart]
+concept:(nager)[swimming swim]
+
+
+u:(e:onStart) Hello, we would like to present you our newest smartwatches and smartbands, which one do you prefer to see more details?
+    u1:(~montre)$montre=1
+    u1:(~bracelet)$bracelet=1
+
+#for smartwatches    
+u:(e:montre)In order to be compatible with your smartphone, we suggest choosing your operating system between Android and iOS.
+    u1:(Android) ^gotoReactivate(demandeUtiA)
+    u1:(iOS) ^gotoReactivate(demandeUtiiOS)
+
+#pour les montres android    
+proposal:%demandeUtiA OK, based on your daily usage, you prefer to use smartwatch to make phonecalls or to navigate applications?
+    u1:([~appel ~navigation])According to your choice, we recommend the following smartwatches:Samsung Gear S2, ZeRound, ZeClock, ZeWatch 3, LG watch, smartwatch 3 et Huawei Watch. You could also click one of them to see technical details. ^gotoReactivate(demandeMAndroid)
+       
+proposal: %demandeMAndroid Which one would you like to choose?
+    u1:(_*)OK, your choice is saved as $1
+    
+
+    
+      
+#pour les montres iOS    
+proposal:%demandeUtiiOS OK, based on your daily usage, you prefer to use smartwatch to make phonecalls or to navigate applications?
+    u1:([~appel ~navigation])According to your choice, we recommend the following smartwatches: iWatch, ZeRound, ZeClock, ZeWatch 3, et Huawei Watch. You could also click one of them to see technical details. ^gotoReactivate(demandeMiOS)
+    
+proposal: : %demandeMiOS Which one would you like to choose?
+    u1:(_[iWatch ZeRound ZeClock "ZeWatch 3" "Huawei Watch"])OK, your choice is saved as $1
+    
+    
+    
+###############################################################################################    
+#for smartband   
+u:(e:bracelet)In order to be compatible with your smartphone, we suggest choosing your operating system between Android and iOS.
+    u1:([Android iOS]) ^gotoReactivate(demandeUtiBracelet)
+    
+    
+#pour les bracelets android et iOS    
+proposal:%demandeUtiBracelet OK, based on your daily usage, you prefer to use smartwatch to measure heart rate or swim with it?
+    u1:(~mesure)According to your choice, we recommend the following smartbands: ZeFit 2 Pulse et Fit Charge HR. You could also click one of them to see technical details. ^gotoReactivate(demandeBraMe)
+    u1:(~nager)According to your choice, we recommend the following smartbands: Withings Pop et Polar M400. You could also click one of them to see technical details. ^gotoReactivate(demandeBraNa)
+       
+proposal: % demandeBraMe Which one would you like to choose?
+    u1:(_["ZeFit 2 Pulse" "Fit Charge HR"])OK, your choice is saved as $1.
+    
+proposal: % demandeBraNa Which one would you like to choose?
+    u1:(_["Withings Pop" "Polar M400"])OK, your choice is saved as $1.
+       
+
+                
+                
+    
+      
