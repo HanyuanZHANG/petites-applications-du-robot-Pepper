@@ -9,3 +9,4 @@ language: enu
 
 # Replying to speech
 #u:(~hello) ~hello
+u:(e:onStart) Vous avez choisi montre

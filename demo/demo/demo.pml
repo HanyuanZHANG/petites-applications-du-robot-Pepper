@@ -163,6 +163,7 @@
         <File name="jquery-2.1.4.min" src="html/js/jquery-2.1.4.min.js" />
         <File name="qimessaging_helper" src="html/js/qimessaging_helper.js" />
         <File name="new  1" src="html/new  1.txt" />
+        <File name="watch" src="html/watch.htm" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />

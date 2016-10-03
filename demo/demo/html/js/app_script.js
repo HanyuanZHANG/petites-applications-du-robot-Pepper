@@ -20,6 +20,7 @@ session.subscribeToEvent("Dialog/LastInput", function(text) {
 
 function product_select(product){
   $("#"+product).on('click', function(){
+	location.href = 'watch.htm'
     // alert('ChangeApps/'+app_name);
     select_effect(product);
     session.raiseEvent('demo/product', product);

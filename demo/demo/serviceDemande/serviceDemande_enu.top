@@ -9,3 +9,13 @@ language: enu
 
 # Replying to speech
 #u:(~hello) ~hello
+concept:(hello) [hello hi hey "good morning" greetings bonjour]
+concept:(yes) [oui yes "all right" sure "why not" ok certainly "very well" yep yea definitely amen]
+concept:(no) [non no nope "don't want" "no way" never "not at all"]
+concept:(montre)[{la}montre "montre connectée"]
+concept:(bracelet)[{le}bracelet "bracelet connecté"]
+
+u:(e:onStart)Bonjour, nous vous proposons les produits montres connectées et les bracelets, quel type de produit que vous préférez plus? 
+    u1:(~montre)$demo/product="smartwatch"
+    u1:(~bracelet)$demo/product="smartband"
+    
