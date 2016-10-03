@@ -52,10 +52,10 @@ proposal:%demandeUtiBracelet OK, selon votre utilisation, vous préférez utilis
     u1:(~nager)selon votre mode d'utilisation, nous vous proposons ces bracelets suivantes: Withings Pop et Polar M400. Vous pourriez appuyer "en savoir plus" pour regarder les détails. ^gotoReactivate(demandeBraNa)
        
 proposal: % demandeBraMe Quelle montre vous aimez plus?
-    u1:(_["ZeFit 2 Pulse" "Fit Charge HR"])OK, votre préférence est bien noté que vous aimez plus le $1.
+    u1:(_["ZeFit 2 Pulse" "Fit Charge HR"])OK, votre préférence est bien noté que vous aimez plus le $1
     
 proposal: % demandeBraNa Quelle montre vous aimez plus?
-    u1:(_["Withings Pop" "Polar M400"])OK, votre préférence est bien noté que vous aimez plus le $1.
+    u1:(_["Withings Pop" "Polar M400"])OK, votre préférence est bien noté que vous aimez plus le $1
        
 
                 

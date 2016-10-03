@@ -54,10 +54,10 @@ proposal:%demandeUtiBracelet OK, based on your daily usage, you prefer to use sm
     u1:(~nager)According to your choice, we recommend the following smartbands: Withings Pop et Polar M400. You could also click one of them to see technical details. ^gotoReactivate(demandeBraNa)
        
 proposal: % demandeBraMe Which one would you like to choose?
-    u1:(_["ZeFit 2 Pulse" "Fit Charge HR"])OK, your choice is saved as $1.
+    u1:(_["ZeFit 2 Pulse" "Fit Charge HR"])OK, your choice is saved as $1
     
 proposal: % demandeBraNa Which one would you like to choose?
-    u1:(_["Withings Pop" "Polar M400"])OK, your choice is saved as $1.
+    u1:(_["Withings Pop" "Polar M400"])OK, your choice is saved as $1
        
 
                 
