@@ -1,0 +1,24 @@
+topic: ~pythonDialog()
+language: frf
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+concept:(stop) ["quitter" "arrête" "arrête l'application" "arrête d'écouter pepper"]
+
+u:(e:onStart) Coucou. $pythonDialog/start=1
+
+
+#u:(e:pythonDialog/scriptStart) $pythonDialog/start=1
+
+u:(e:pythonDialog/tts) $pythonDialog/tts 
+
+#u:(~stop) 
+
+
