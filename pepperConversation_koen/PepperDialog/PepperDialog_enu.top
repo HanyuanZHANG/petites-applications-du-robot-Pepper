@@ -1,0 +1,15 @@
+topic: ~PepperDialog()
+language: enu
+
+
+
+
+concept:(greetings) [hello hi hey "good morning" greetings]
+concept:(glad) ["glad {to} {meet you} {too}"]
+concept:(changeFrench) ["in french" "to french" "speak {in} french"]
+
+
+u:(~greetings) $NaoPepper/Action="Humain" hello Koon, glad to meet you .
+u:(~glad)  $NaoPepper/Action="Audiance"  "\rspd=70\  \style=didactic\ Let me present myself to this wonderful audience ! \pau=800\ Hi everybody, I am Rocsi \pau=300\ and I was invited here to present the IT managers event \pau=300\ and I am very happy to be here in front of you." $NaoPepper/Action="Humain"
+
+u:(~changeFrench)  $onStopped=1

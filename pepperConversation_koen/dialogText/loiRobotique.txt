@@ -1,0 +1,6 @@
+R:je peux dire la dernière ?
+A:Nao
+Q:oui, vas y.
+R:la troisième loi est qu'un robot doit protéger son existence.
+Q:attention, \pau=200\ t'as oublié une choses très importante, pour cette dernière loi : elle est sous condition que cette protection n'entre pas en conflit avec la première ou la deuxième loi.
+A:Humain

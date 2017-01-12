@@ -1,0 +1,16 @@
+﻿A:Nao
+P:1
+Q:roki tu peux te réveiller ? \pau=500\ nous sommes arrivés au séminaire. Koune nous attends pour présenter la journée.
+P:2
+Q:Allez, Roki, réveille-toi !
+a:v100
+R:Non, j'ai en core sommeil, je veux dormir !
+Q:Rien du tout, Roki! \pau=300\ tu te lève tout de suite, il y a du monde qui nous regarde !
+R:OK ok.
+d:Debout
+R:Bonjour koune, bonjour Rocsi, ah ! je suis en pleine forme j’ai bien dormi, j'ai soif. Je peu avoir mon jus de goyave ?
+Q:Non ! il n'y pas de jus ici ! \pau=300\ mais tu sais que nous sommes au Beffroi ? et tu n'es pas à la maison !
+R:lol! \pau=200\ Mais c'était pour rire! \pau=200\ J’aime bien te faire des blagues, \pau=300\ je vais présenter aussi la journée avec vous. \pau=800\ Je vous souhaite une bonne année et tous mes vœux. Je vous réserve des surprises aujourd’hui ! Même pour toi koune.
+A:Humain
+a:v0
+

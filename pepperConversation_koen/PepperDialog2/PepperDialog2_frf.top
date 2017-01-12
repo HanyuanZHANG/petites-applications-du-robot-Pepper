@@ -1,0 +1,38 @@
+topic: ~PepperDialog2()
+language: frf
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+concept:(savoirFaire) ["{[sait savoir peut]} [faire fait] [introduction "l'introduction"]"]
+concept:(demandeQui) ["c'est qui {lui}" qui "qui est-ce"]
+
+
+proposal: %onStartSuite $NaoPepper/Action="Humain" Koune, Je peux rester à tes côtés pour présenter la journée. $NaoPepper/FileOpen1=0 $NaoPepper/FileOpen2=0 $NaoPepper/FileOpen3=0  $NaoPepper/FileOpen4=0
+
+proposal: %fileOpen1 "Je suis venu avec mon petit frère roki, \pau=300\ il dort encore mais il va se réveiller." 
+         $NaoPepper/Phase=1 $NaoPepper/FileOpen1=1 $NaoPepper/Start="dialogText/LeverNao.txt" $NaoPepper/Action="Nao"
+
+proposal: %savoirFaireSuite $NaoPepper/Action="Humain" Ca va comme ça koune ? 
+      
+u:(e:onStart) $NaoPepper/Action="Audiance" oui biensûr, \pau=800\ bonjour tout le monde, je suis Rocsi et je suis là pour présenter le séminaire annuel des managers du S I  \pau=200\  et je suis très content d'être là devant vous! \pau=500\ ^gotoReactivate(onStartSuite)
+
+
+u:(~savoirFaire) $NaoPepper/Action="Audiance" Oui biensûr, koune. \pau=200\ et demain en 2025 on fait ça tout le temps. \pau=800\ bonjour à tous les managers S I, bienvenue au Beffroi. 
+\pau=500\ C’est un honneur d’être avec vous \pau=200\ aujourd’hui au séminaire des managers du S I.
+\pau=500\ C’est un plaisir aussi de vous souhaiter à tous une très belle année digitale, innovante et fun pour 2017 \pau=200\ et du bonheur pour vos familles. ^gotoReactivate(savoirFaireSuite)
+
+
+u:(~demandeQui)  ^first["$NaoPepper/FileOpen1==0 ^gotoReactivate(fileOpen1)"]
+
+
+
+u:(e:NaoPepper/NextPhase)  $onStopped=1
+
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay

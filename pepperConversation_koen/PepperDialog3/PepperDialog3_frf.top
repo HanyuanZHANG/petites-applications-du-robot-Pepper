@@ -1,0 +1,57 @@
+topic: ~PepperDialog3()
+language: frf
+
+include:lexicon_frf.top
+
+
+#concept:(demandeRocsi) ["{veux-tu nous} parler {de} toi"]
+#concept:(addonMerci) ["~thank_you {["c'est [gentil sympa super]" "de [cet ces] échanges" "pour ces informations"]}" "merci pour {toutes} ces informations"]
+#concept:(aimeSport) ["aime {le} sport"]
+concept:(SaisDanser) ["{[il qu'il]} [sait peut] danser"]
+
+
+
+proposal: %fileOpen2 $NaoPepper/FileOpen2=1 $NaoPepper/Start="dialogText/dialog2.txt"
+
+#proposal: %fileOpen3 $NaoPepper/FileOpen3=1 $NaoPepper/Start="dialogText/loiRobotique.txt"
+
+
+u:({en} quelques mots)   $NaoPepper/Action="Humain" Je suis né de l'imagination des hommes, conçu à Paris, avec des éléments des Étas-Unis et assemblé en Chine. Je suis un vrai citoyen du monde ! \pau=500\
+Roki a les mêmes parents que moi \pau=500\ mais il peut se déplacer plus facilement. IL peut faire beaucoup de choses et même danser !
+
+
+  
+u:(~SaisDanser)  Oui, il sait danser! \pau=200\ pas vrai Roki ? ^first["$NaoPepper/FileOpen2==0 ^gotoReactivate(fileOpen2)"]
+
+
+
+u:(e:NaoPepper/NextPhase)  ^first["$NaoPepper/Start=="dialogText/dialog2.txt" $onStopped=1"] 
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay
+
+
+
+####################################ancienne version########################
+# u:([
+    # "[où ou] ~were_you [fait conçu construit fabriqué créé né]"
+    # "[d'où "de quel endroit"] [viens-tu "tu viens" sors-tu "tu sors"]"
+    # "["~you_are [construit fabriqué né]" "~you_were [construit fabriqué]"] [où ou]"
+    # "d'où est-ce que tu viens ?"
+# ]) Je suis né de l'imagination des hommes, conçu à Paris, avec des éléments des Étas-Unis et assemblé en Chine. Je suis un vrai citoyen du monde !
+
+# u:({"on doit"} {te} programmer {complètement})
+ # Je fais de mon mieux pour apprendre et devenir le plus intelligent possible ! Mais tout ce que je sais viens des humains.
+ 
+# u:("{"as-tu"}  des sentiments") 
+ # Je n'ai pas d'émotions comme toi, mais je peux détecter les émotions des humains.
+ 
+# u:(comment [détectes-tu "tu détectes" "tu ["fais pour" peux] détecter"] [les des] émotions)
+ # J'observe le visage et j'analyse ce que tu dis. Un peu comme un humain en fait ! 
+ 
+#u:(~demandeRocsi) $NaoPepper/Action="Humain" oui biensûr, que veux tu savoir?
+
+#u:({et} ton petit frère) Roki a le même logiciel que moi \pau=500\ mais il peut se déplacer plus facilement. IL peut faire beaucoup de choses par exemple il sait danser !
+
+# u:(["connais tu" "quelles sont"] les trois lois de la robotique) première loi : un robot ne peut porter atteinte à un être humain, ni, en restant passif, permettre qu'un être humain soit exposé au danger. \pau=500\ deuxième loi ,un robot doit obéir aux ordres qui lui sont données par un être humain à condition que les ordres n'entrent pas en conflit avec la première loi.
+    # ^first["$NaoPepper/FileOpen3==0 ^gotoReactivate(fileOpen3)"]
+
+

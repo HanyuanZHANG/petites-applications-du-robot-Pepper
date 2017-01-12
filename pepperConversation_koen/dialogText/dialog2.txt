@@ -1,0 +1,9 @@
+a:v100
+A:Nao
+R:Mais bien sûr ! je sais danser ! \pau=500\ Et comme John Travolta ! \pau=500\ Regarde, je te montre !
+d:Disco
+R:ça y est, j'ai fini. \pau=800\ Alors ça vous a plu ?
+A:Humain
+Q:il fait toujours son show mon petit frère, il veut être une star !
+A:Humain
+a:v0

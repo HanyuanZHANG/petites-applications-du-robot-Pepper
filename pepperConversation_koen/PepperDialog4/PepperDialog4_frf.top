@@ -1,0 +1,29 @@
+topic: ~PepperDialog4()
+language: frf
+
+concept:(demandeRole) ["pourquoi tu es là aujourd'hui" "{"quelle est"} {ta} mission {"aujourd'hui"}"]
+concept:(oublierChose) ["{"t'as pas"} [oublier oublié] {"quelques choses"}"]
+
+
+
+proposal: %fileOpen4 $NaoPepper/FileOpen4=1 $NaoPepper/Start="dialogText/agenda.txt"
+
+u:(~demandeRole) $NaoPepper/Action="Humain" Je suis ici \pau=300\ parce que je vais vous présenter l’agenda \pau=500\ et je vais rester avec toi toute la journée \pau=500\. Benoît tu peux l'afficher s’il te plaît ? 
+     Tu peux aussi le voir sur ma tablette Koune. 
+                                    $NaoPepper/AfficheImg1=1 
+                                    ^first["$NaoPepper/FileOpen4==0 ^gotoReactivate(fileOpen4)"]
+                                    
+u:(e:NaoPepper/NextPhase)  $NaoPepper/Action="Audiance" Après cette partie brillamment expliquée par Koune, vous pourrez aller voir différents projets sur des stands interactifs : le village des innovations. \pau=400\
+                En fin d'après midi, il y aura à nouveau une plénière sur l'inovation, \pau=500\ notre affaire à nous tous Managers !
+                Vous pourrez élire le meilleur prototype \pau=300\ et nous finirons enfin avec quelques mots sur la présentation de notre Innovation Box.
+                
+u:(~oublierChose)  $NaoPepper/Action="Audiance" oups ! Oui c'est vrai. \pau=500\ c'est très important pour vous les humains . \pau=500\ de 12 heure et demi à 14 heure c'est le déjeuner , un cocktail déjeunatoire \pau=500\ vous dîtes. \pau=300\ Ensuite, vous pouvez prendre votre café dans le village des innovations et faire votre visite.  $NaoPepper/Action="Humain"
+
+
+u:(bilan stratégique) $NaoPepper/Action="Audiance" oui, biensûr, j'invite sur scène pour participer à la table ronde: \pau=500\ Jean-Claude Burtin, \pau=500\ Sophie Claude, \pau=500\ Céline Bergesse, \pau=500\ Jean Daniel Guedj, \pau=500\  et Olivier Mast, \pau=500\ et Michel Diverchy. \pau=500\ Merci de nous rejoindre sur scène. \pau=1000\ vous pouvez les applaudir. $NaoPepper/Action="applause" ^run(animations/Stand/Emotions/Positive/Winner_2)  $NaoPepper/Action="Humain"  
+
+
+u:({"nous vous"} retrouvons {"tout à l'heure"}) très bien. \pau=800\ on va se refaire une beauté avec Aziza la maquilleuse, elle est très gentille. $onStopped=1
+
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay
+

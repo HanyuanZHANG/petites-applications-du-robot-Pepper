@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="pepperconversation_koen-1d214e">
+ <names>
+  <name lang="en_US">pepperConversation_koen</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+  <language>fr_FR</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>fr_FR</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <loadingResponses>
+    <sentence lang="fr_FR">juste une seconde, je lance le dialogue</sentence>
+    <sentence lang="fr_FR">je commence</sentence>
+   </loadingResponses>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+ <services>
+  <service autorun="false" name="naopepperdialog" execStart="/usr/bin/python2 naopepperdialog.py"/>
+ </services>
+</package>
