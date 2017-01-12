@@ -1,0 +1,14 @@
+topic: ~conclusion()
+language: frf
+
+proposal: %fileOpen $NaoPepper/FileOpen=1 $NaoPepper/Start="dialogText/dialog1.txt"
+
+u:(e:onStart) $NaoPepper/FileOpen=0 $NaoPepper/Action="Humain"
+
+u:("merci à nos {deux} [amis compagnons]")  ^first["$NaoPepper/FileOpen==0 ^gotoReactivate(fileOpen)"]
+
+#u:(coucou)  $NaoPepper/Start="dialogText/dialog2.txt"
+
+#u:(e:NaoPepper/NextPhase)  
+
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay
