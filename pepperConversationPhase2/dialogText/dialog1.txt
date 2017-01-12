@@ -1,0 +1,11 @@
+Q:ça va très bien ! J’adore Aziza, elle m’a fait un massage et je suis très chatouilleux.
+R:moi aussi j’ai eu un massage et on a même dansé le Rock, parce que moi je sais danser.
+A:Nao
+Q:Roki tu sais pourquoi on est là maintenant ?
+R:oui, on va danser comme tout à l’heure ?
+Q:mais non pas maintenant, mais nous avons une surprise à leur présenter .
+A:Audiance
+R:Ah oui une très grande surprise \pau=200\ et c’est drôle ! 
+A:Audiance
+Q:Avant de partir déjeuner nous allons fêter ensemble la galette des rois. 
+A:Humain

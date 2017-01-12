@@ -1,0 +1,22 @@
+topic: ~pepperDialogPhase2()
+language: frf
+
+#concept:(resterMaquilleuse) ["{[rester reste]} {[chez la]} maquilleuse"]
+concept:(galette) ["{et} {la} {voici} {[la cette]} galette"]
+
+proposal: %fileOpen1 $NaoPepper/FileOpen1=1 $NaoPepper/Start="dialogText/dialog1.txt"
+proposal: %fileOpen2 $NaoPepper/FileOpen2=1 $NaoPepper/Start="dialogText/dialog2.txt"
+proposal: %fileOpen3 $NaoPepper/FileOpen3=1 $NaoPepper/Start="dialogText/dialog3.txt"
+
+u:(e:onStart)  $NaoPepper/FileOpen1=0 $NaoPepper/FileOpen2=0  $NaoPepper/FileOpen3=0 $NaoPepper/Action="Humain"
+
+u:(ça va)   ^first["$NaoPepper/FileOpen1==0 ^gotoReactivate(fileOpen1)"]
+
+u:(~galette) ^first["$NaoPepper/FileOpen2==0 ^gotoReactivate(fileOpen2)"]
+
+u:(e:NaoPepper/NextPhase)  ^first[ 
+                                   "$NaoPepper/Start=="dialogText/dialog2.txt" $onStopped=1"
+                                  ]
+
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay
+

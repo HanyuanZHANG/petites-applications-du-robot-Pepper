@@ -1,0 +1,8 @@
+A:Audiance
+Q:nous vous souhaitons un bon appétit, le déjeuner est en sortant de la salle \pau=200\ et bonne galette des rois !
+Q:On vous retrouve dans la salle au rez-de-chaussée pour prendre un café avant de découvrir le village des innovations.
+R:bon appétit! \pau=200\ Attends-moi ! j’arrive aussi ! 
+a:Bouger
+P:5
+a:stopBouger
+a:stand

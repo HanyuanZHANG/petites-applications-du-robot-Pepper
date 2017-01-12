@@ -1,0 +1,13 @@
+Q:Oh la la ! \pau=200\ mais elle est grande !
+R:t'as raison ! elle est très grande! \pau=300\ et je peu avoir une part ?
+A:Nao
+Q:Ok \pau=200\ Donne ton assiette \pau=500\ et si tu es le roi tu sais que tu vas devoir choisir une reine . 
+R:Oui \pau=200\ les filles sont toutes jolies ici à la D S I. \pau=500\ J'espère que je vais trouver la fève !
+A:Audiance
+Q:nous vous souhaitons un bon appétit, le déjeuner est en sortant de la salle \pau=200\ et bonne galette des rois !
+Q:On vous retrouve dans la salle au rez-de-chaussée pour prendre un café avant de découvrir le village des innovations.
+R:bon appétit! \pau=200\ Attends-moi ! j’arrive aussi ! 
+a:Bouger
+P:5
+a:stopBouger
+a:stand
