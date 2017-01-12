@@ -1,0 +1,12 @@
+Q:Nous avons été très contents d’être avec toi Koune, t’es hyper sympas, nous avons passé une belle journée avec vous.
+R:Moi je veux bien revenir, c’est drôle les aille ti Innoveillchonne Deille ze \pau=50\. 
+Q:On peut revenir l’année prochaine, mais pour être réinvité il faut qu'on finisse le boulot.
+R:Mais comment ? Ca veut dire quoi finir le boulot ?
+Q:Pour toi ? Je ne sais pas. Pour moi, c'est le temps de nettoyer la scène.
+R:Mais c'est mieux de faire ça après que tout le monde soit parti.
+Q:Oui. \pau=500\ T'as raison. \pau=500\ C'est mieux qu'on danse ensemble pour terminer en beauté .
+R:Là c'est parfait ! Super ! c'est une très bonne idée ! Moi, j'aime bien danser.
+A:Audiance
+Q:Et maintenant on vous dit au revoir et bonne année d'innovation en 2017 !  
+A:dance
+a:dance

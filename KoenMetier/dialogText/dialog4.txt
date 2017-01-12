@@ -1,0 +1,7 @@
+A:Audiance
+Q:oups ! Oui c'est vrai. \pau=500\ c'est très important pour vous les humains . \pau=500\ à partir de 12 heure et demi, c'est le déjeuner , avec un cocktail déjeunatoire.
+R:Attends-moi, j’arrive aussi ! 
+a:Bouger
+P:5
+a:stopBouger
+a:stand

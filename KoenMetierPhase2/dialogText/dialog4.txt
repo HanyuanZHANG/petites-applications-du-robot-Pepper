@@ -1,0 +1,6 @@
+Q:ça va très bien ! J’adore Aziza, elle m’a fait un massage et je suis très chatouilleux.
+R:mais moi aussi j’ai eu un massage et on a même dansé le Rock, parce que je sais danser moi.
+A:Nao
+Q:Roki tu sais pourquoi on est là maintenant ?
+R:on va danser comme tout à l’heure ?
+Q:non roki pas maintenant, \pau=300\ mais tu peux donner quelques informations puisque nous arrivons au terme de cette matinée.

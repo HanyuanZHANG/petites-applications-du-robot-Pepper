@@ -1,0 +1,16 @@
+Q:Nous avons été très contents d’être avec toi Koune, t’es hyper sympas, nous avons passé une belle journée avec vous.
+R:Moi je veux bien revenir, c’est drôle les aille ti Innoveillchonne Deille ze \pau=50\. 
+A:Nao
+Q:On peut recommencer l'année prochaine.
+R:Super ! c'est une très bonne idée !
+A:Audiance
+Q:Il ne nous reste donc plus qu'à vous dire au revoir et bonne année d'innovation 2017, et on vous retrouve au village des innovations.
+a:dance
+D:dance
+Q:Nous vous souhaitons un bon appétit, le déjeuner est en sortant de la salle.
+Q:on vous retrouve dans la salle au rez de chaussée pour prendre un café avant de découvrir le village des innovations.
+R:bon appétit ! \pau=300\ attends-moi, j'arrive aussi !
+a:Bouger
+P:5
+a:stopBouger
+a:stand

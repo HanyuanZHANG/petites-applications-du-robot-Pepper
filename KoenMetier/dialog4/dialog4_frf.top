@@ -1,0 +1,28 @@
+topic: ~dialog4()
+language: frf
+
+
+concept:(demandeRole) ["pourquoi tu es là aujourd'hui" "{"quelle est"} {ta} mission {"aujourd'hui"}"]
+concept:(oublierChose) ["{"t'as pas"} [oublier oublié] {"quelques choses"}"]
+
+
+
+proposal: %fileOpen3 $NaoPepper/FileOpen3=1 $NaoPepper/Start="dialogText/dialog3.txt"
+
+proposal: %fileOpen4 $NaoPepper/FileOpen4=1 $NaoPepper/Start="dialogText/dialog4.txt"
+
+u:(~demandeRole) $NaoPepper/Action="Humain" Je suis ici \pau=300\ parce que je vais vous présenter l’agenda \pau=500\ et je vais rester avec toi toute la matinée \pau=500\. Benoît, tu peux l'afficher s'il te plaît ? 
+     tu peux aussi le voir sur ma tablette Koune. 
+                                    $NaoPepper/AfficheImg1=1 
+                                    ^first["$NaoPepper/FileOpen3==0 ^gotoReactivate(fileOpen3)"]
+                                    
+
+u:(~oublierChose)   ^first["$NaoPepper/FileOpen4==0 ^gotoReactivate(fileOpen4)"]
+
+
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay
+
+u:(e:NaoPepper/NextPhase)  ^first["$NaoPepper/Start=="dialogText/dialog4.txt" $onStopped=1"] 
+
+
+

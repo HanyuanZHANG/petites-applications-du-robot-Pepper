@@ -1,0 +1,26 @@
+topic: ~dialog2()
+language: frf
+
+
+concept:(savoirFaire) ["{[sait savoir peut]} [faire fait] [introduction "l'introduction"]"]
+concept:(demandeQui) ["c'est qui {lui}" qui "qui est-ce"]
+
+
+proposal: %onStartSuite $NaoPepper/Action="Humain" Koune, Je peux rester à tes côtés pour présenter le programme de la matinée. $NaoPepper/FileOpen1=0 $NaoPepper/FileOpen2=0 $NaoPepper/FileOpen3=0  $NaoPepper/FileOpen4=0
+proposal: %savoirFaireSuite $NaoPepper/Action="Humain" Ca va comme çà koune ? 
+
+proposal: %fileOpen1 "Je suis venu avec mon petit frère roki, \pau=300\ il dort encore mais il va se réveiller." 
+         $NaoPepper/Phase=1 $NaoPepper/FileOpen1=1 $NaoPepper/Start="dialogText/dialog1.txt" $NaoPepper/Action="Nao"
+         
+
+u:(e:onStart) $NaoPepper/Action="Audiance" oui biensûr, \pau=800\ bonjour tout le monde, je suis Rocsi et je suis là pour présenter le aille ti Innoveillchonne Deille. \pau=200\ et je suis très content d'être là devant vous! \pau=500\ ^gotoReactivate(onStartSuite)
+
+u:(~savoirFaire) $NaoPepper/Action="Audiance" Oui biensûr, koune. \pau=200\ demain en 2025 on fera ça tout le temps. \pau=800\ Bonjour à tous nos invités, bienvenue au Beffroi. 
+\pau=500\ C’est un honneur d’être avec vous \pau=200\ aujourd’hui à l'aille ti Innoveillchonne Deille. 
+\pau=500\ C’est un plaisir aussi de vous souhaiter à tous une très belle année digitale, innovante et fun pour 2017 \pau=200\ et du bonheur pour vos familles. ^gotoReactivate(savoirFaireSuite)
+
+u:(~demandeQui)  ^first["$NaoPepper/FileOpen1==0 ^gotoReactivate(fileOpen1)"]
+
+u:(e:NaoPepper/NextPhase)  $onStopped=1
+
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay

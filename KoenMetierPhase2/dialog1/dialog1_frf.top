@@ -1,0 +1,17 @@
+topic: ~dialog1()
+language: frf
+
+#proposal: %fileOpen4 $NaoPepper/FileOpen4=1 $NaoPepper/Start="dialogText/dialog4.txt"
+
+proposal: %fileOpen5 $NaoPepper/FileOpen5=1 $NaoPepper/Start="dialogText/dialog5.txt"
+
+u:(e:onStart) coucou $NaoPepper/FileOpen5=0
+
+#u:(ça va)   ^first["$NaoPepper/FileOpen4==0 ^gotoReactivate(fileOpen4)"]
+
+u:("merci à nos {deux} [amis compagnons]")  ^first["$NaoPepper/FileOpen5==0 ^gotoReactivate(fileOpen5)"]
+
+
+u:(e:NaoPepper/NaoSay) $NaoPepper/NaoSay
+
+
